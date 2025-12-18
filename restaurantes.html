@@ -4,17 +4,17 @@
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Maki Catta - Explora el Mundo</title>
-    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <meta name="description" content="Maki Catta - Explora los mejores 6 restaurantes y destinos exclusivos.">
+    <title>Maki Catta - Restaurantes</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link
-        href="https://fonts.googleapis.com/css2?family=Alegreya:wght@400;700&family=Exo+2:wght@400;500;700&family=Dosis:wght@300;400;600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Alegreya:wght@700&family=Exo+2:wght@500;700&family=Dosis:wght@400;600&family=Material+Icons+Outlined&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap"
         rel="stylesheet" />
 
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
     <script>
         tailwind.config = {
             darkMode: "class",
@@ -28,12 +28,12 @@
                         "background-dark": "#1A1614",
                         "card-light": "#FFFFFF",
                         "card-dark": "#2C2420",
-                        "footer-custom": "#291B0A", // Color solicitado para el footer
+                        "footer-custom": "#291B0A",
                     },
                     fontFamily: {
-                        display: ["Alegreya", "serif"], // Para títulos
-                        button: ["'Exo 2'", "sans-serif"], // Para botones y nav
-                        body: ["Dosis", "sans-serif"], // Para párrafos
+                        display: ["Alegreya", "serif"],
+                        button: ["'Exo 2'", "sans-serif"],
+                        body: ["Dosis", "sans-serif"],
                     },
                 },
             },
@@ -49,9 +49,9 @@
             <div class="flex justify-between h-16 items-center">
                 <div class="flex-shrink-0">
                     <a href="#">
-                        <img id="logo-light" src="imagenes/logo_blanco.webp" alt="Logo"
-                            class="h-16 w-auto object-contain">
-                        <img id="logo-dark" src="imagenes/logo.webp" alt="Logo"
+                        <img id="logo-light" src="imagenes/logo_blanco.webp" alt="Logo" width="160" height="64"
+                            fetchpriority="high" class="h-16 w-auto object-contain">
+                        <img id="logo-dark" src="imagenes/logo.webp" alt="Logo" width="160" height="64"
                             class="hidden h-16 w-auto object-contain">
                     </a>
                 </div>
@@ -72,7 +72,7 @@
                 </div>
 
                 <div class="md:hidden">
-                    <button id="mobile-menu-button" class="text-white focus:outline-none">
+                    <button id="mobile-menu-button" class="text-white focus:outline-none" aria-label="Menu">
                         <span class="material-icons-outlined text-3xl">menu</span>
                     </button>
                 </div>
@@ -81,11 +81,10 @@
     </header>
 
     <main class="flex min-h-screen flex-col">
-        <div class="relative flex min-h-[500px] flex-col justify-center overflow-hidden bg-slate-900 py-12">
+        <section class="relative flex min-h-[500px] flex-col justify-center overflow-hidden bg-slate-900 py-12">
             <div class="absolute inset-0 z-0">
                 <div class="h-full w-full bg-cover bg-center bg-no-repeat opacity-60"
-                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBFVLYXVK8hfpWkXg6HmT1ULToHWXSSSOFYq-1GVf9ugQP3gz2Z5AKdXQhZidR91ai1SxFh9O01ZVeihMWdrdw8WFTYZQaKalvHQkK7uvZ2dAvzYXnDv-8rtqFR2L69vAnSpO0fbpmQnA9IpdD36hv0ipwg6zTeNjE-E9e1xgh_8ZA7YLuIHCdLIyfJGCl5iYrmDT_4-apwkArGIHi9I6Q4an-4V_jx0M2WPPP5THmKMjXsXumhLmzI6BcC9wOTzABFXj8UEWTtPdU2");'>
-                </div>
+                    style='background-image: url("imagenes/hero-bg.webp");'></div>
                 <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent"></div>
             </div>
             <div class="relative z-10 mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -105,67 +104,168 @@
                     </p>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div class="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
+        <section class="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:gap-10">
-                <div
+
+                <article
                     class="group relative flex flex-col overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg dark:border-slate-800 dark:bg-slate-900">
                     <div class="relative h-60 w-full overflow-hidden">
                         <img class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpspYlQOTkrViz2Xc6VdUVPsoNuAGewPhNQMKnYhVHLx2bcxrBh7Q0JQ-ayL9r0aRjuBJG5PFBokyVAT_mdmtEanuEHBBIzOnLGMA9bpsJm-jGCQI-8kL5cgLYudYmiZl22SrdRQDqvHleSwBueXFvKj98xiWvxhswvmNhrQbAgdgsv0Lary4YVHoHidCLgeMr_G2sIrfuzvFBxafN3irxE3K5YHL0hHH7pNbb5B3V23de0AGrav4ebQZa5B37wLhVFlhbdoliWaET" />
+                            src="imagenes/restaurante-1.webp" alt="Restaurante 1" width="400" height="240"
+                            loading="lazy" />
                         <div
                             class="absolute right-3 top-3 rounded-lg bg-white/90 px-2.5 py-1 text-xs font-bold text-slate-900 backdrop-blur-sm dark:bg-slate-900/90 dark:text-white font-button">
                             $$$</div>
                     </div>
                     <div class="flex flex-1 flex-col p-5">
-                        <h3 class="text-xl font-display font-bold text-slate-900 dark:text-white">La Marea Azul</h3>
+                        <h2 class="text-xl font-display font-bold text-slate-900 dark:text-white">La Marea Azul</h2>
                         <p class="mt-2 text-sm font-body text-slate-600 dark:text-slate-300">Cocina mediterránea con la
                             pesca más fresca.</p>
                         <button
                             class="mt-4 w-full rounded-lg bg-primary py-2.5 text-sm font-button font-bold text-white transition-colors hover:bg-opacity-90">Ver
                             Detalles</button>
                     </div>
-                </div>
+                </article>
+
+                <article
+                    class="group relative flex flex-col overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg dark:border-slate-800 dark:bg-slate-900">
+                    <div class="relative h-60 w-full overflow-hidden">
+                        <img class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                            src="imagenes/restaurante-2.webp" alt="Restaurante 2" width="400" height="240"
+                            loading="lazy" />
+                        <div
+                            class="absolute right-3 top-3 rounded-lg bg-white/90 px-2.5 py-1 text-xs font-bold text-slate-900 backdrop-blur-sm dark:bg-slate-900/90 dark:text-white font-button">
+                            $$</div>
+                    </div>
+                    <div class="flex flex-1 flex-col p-5">
+                        <h2 class="text-xl font-display font-bold text-slate-900 dark:text-white">El Olivo Dorado</h2>
+                        <p class="mt-2 text-sm font-body text-slate-600 dark:text-slate-300">Sabores tradicionales con
+                            un toque contemporáneo.</p>
+                        <button
+                            class="mt-4 w-full rounded-lg bg-primary py-2.5 text-sm font-button font-bold text-white transition-colors hover:bg-opacity-90">Ver
+                            Detalles</button>
+                    </div>
+                </article>
+
+                <article
+                    class="group relative flex flex-col overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg dark:border-slate-800 dark:bg-slate-900">
+                    <div class="relative h-60 w-full overflow-hidden">
+                        <img class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                            src="imagenes/restaurante-3.webp" alt="Restaurante 3" width="400" height="240"
+                            loading="lazy" />
+                        <div
+                            class="absolute right-3 top-3 rounded-lg bg-white/90 px-2.5 py-1 text-xs font-bold text-slate-900 backdrop-blur-sm dark:bg-slate-900/90 dark:text-white font-button">
+                            $$$$</div>
+                    </div>
+                    <div class="flex flex-1 flex-col p-5">
+                        <h2 class="text-xl font-display font-bold text-slate-900 dark:text-white">Corte Supremo</h2>
+                        <p class="mt-2 text-sm font-body text-slate-600 dark:text-slate-300">Las mejores carnes
+                            maduradas a la brasa.</p>
+                        <button
+                            class="mt-4 w-full rounded-lg bg-primary py-2.5 text-sm font-button font-bold text-white transition-colors hover:bg-opacity-90">Ver
+                            Detalles</button>
+                    </div>
+                </article>
+
+                <article
+                    class="group relative flex flex-col overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg dark:border-slate-800 dark:bg-slate-900">
+                    <div class="relative h-60 w-full overflow-hidden">
+                        <img class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                            src="imagenes/restaurante-4.webp" alt="Restaurante 4" width="400" height="240"
+                            loading="lazy" />
+                        <div
+                            class="absolute right-3 top-3 rounded-lg bg-white/90 px-2.5 py-1 text-xs font-bold text-slate-900 backdrop-blur-sm dark:bg-slate-900/90 dark:text-white font-button">
+                            $$</div>
+                    </div>
+                    <div class="flex flex-1 flex-col p-5">
+                        <h2 class="text-xl font-display font-bold text-slate-900 dark:text-white">Sakura Zen</h2>
+                        <p class="mt-2 text-sm font-body text-slate-600 dark:text-slate-300">Sushi de autor y cocina
+                            fusión japonesa.</p>
+                        <button
+                            class="mt-4 w-full rounded-lg bg-primary py-2.5 text-sm font-button font-bold text-white transition-colors hover:bg-opacity-90">Ver
+                            Detalles</button>
+                    </div>
+                </article>
+
+                <article
+                    class="group relative flex flex-col overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg dark:border-slate-800 dark:bg-slate-900">
+                    <div class="relative h-60 w-full overflow-hidden">
+                        <img class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                            src="imagenes/restaurante-5.webp" alt="Restaurante 5" width="400" height="240"
+                            loading="lazy" />
+                        <div
+                            class="absolute right-3 top-3 rounded-lg bg-white/90 px-2.5 py-1 text-xs font-bold text-slate-900 backdrop-blur-sm dark:bg-slate-900/90 dark:text-white font-button">
+                            $$$</div>
+                    </div>
+                    <div class="flex flex-1 flex-col p-5">
+                        <h2 class="text-xl font-display font-bold text-slate-900 dark:text-white">Brisa de Mar</h2>
+                        <p class="mt-2 text-sm font-body text-slate-600 dark:text-slate-300">Mariscos y cócteles frente
+                            a la playa.</p>
+                        <button
+                            class="mt-4 w-full rounded-lg bg-primary py-2.5 text-sm font-button font-bold text-white transition-colors hover:bg-opacity-90">Ver
+                            Detalles</button>
+                    </div>
+                </article>
+
+                <article
+                    class="group relative flex flex-col overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg dark:border-slate-800 dark:bg-slate-900">
+                    <div class="relative h-60 w-full overflow-hidden">
+                        <img class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                            src="imagenes/restaurante-6.webp" alt="Restaurante 6" width="400" height="240"
+                            loading="lazy" />
+                        <div
+                            class="absolute right-3 top-3 rounded-lg bg-white/90 px-2.5 py-1 text-xs font-bold text-slate-900 backdrop-blur-sm dark:bg-slate-900/90 dark:text-white font-button">
+                            $$$</div>
+                    </div>
+                    <div class="flex flex-1 flex-col p-5">
+                        <h2 class="text-xl font-display font-bold text-slate-900 dark:text-white">La Trattoria</h2>
+                        <p class="mt-2 text-sm font-body text-slate-600 dark:text-slate-300">Pastas artesanales y pizzas
+                            al horno de leña.</p>
+                        <button
+                            class="mt-4 w-full rounded-lg bg-primary py-2.5 text-sm font-button font-bold text-white transition-colors hover:bg-opacity-90">Ver
+                            Detalles</button>
+                    </div>
+                </article>
+
             </div>
-        </div>
+        </section>
     </main>
 
     <footer class="bg-footer-custom text-gray-400 py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-4 gap-8 mb-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-8 text-center md:text-left">
                 <div class="col-span-1 md:col-span-2">
-                    <div class="flex items-center gap-2 mb-4">
-                        <img src="imagenes/logo_footer.webp" alt="Logo" class="h-12 w-auto object-contain">
+                    <div class="flex justify-center md:justify-start items-center gap-2 mb-4">
+                        <img src="imagenes/logo_footer.webp" alt="Logo" width="120" height="48"
+                            class="h-12 w-auto object-contain" loading="lazy">
                     </div>
-                    <p class="text-sm font-body max-w-xs">Explorando el mundo, un destino a la vez. Tu socio de
-                        confianza para viajes inolvidables.</p>
+                    <p class="text-sm font-body max-w-xs mx-auto md:mx-0">Explorando el mundo, un destino a la vez. Tu
+                        socio de confianza para viajes inolvidables.</p>
                 </div>
                 <div class="font-button">
-                    <h4 class="text-white font-bold mb-4 uppercase text-xs tracking-wider">Enlaces Rápidos</h4>
+                    <h4 class="text-white font-bold mb-4 uppercase text-xs tracking-wider">Enlaces</h4>
                     <ul class="space-y-2 text-sm">
                         <li><a class="hover:text-white transition" href="#">Inicio</a></li>
                         <li><a class="hover:text-white transition" href="#destinos">Destinos</a></li>
-                        <li><a class="hover:text-white transition" href="#hoteles">Hoteles</a></li>
                     </ul>
                 </div>
                 <div class="font-button">
                     <h4 class="text-white font-bold mb-4 uppercase text-xs tracking-wider">Legales</h4>
                     <ul class="space-y-2 text-sm">
                         <li><a class="hover:text-white transition" href="#">Privacidad</a></li>
-                        <li><a class="hover:text-white transition" href="#">Términos</a></li>
                     </ul>
                 </div>
             </div>
-            <div
-                class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-body">
+            <div class="border-t border-gray-800 pt-8 text-center text-xs font-body">
                 <p>© 2023 Maki Catta Turismo. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
 
     <script>
-        window.addEventListener('scroll', function () {
+        document.addEventListener('DOMContentLoaded', () => {
             const header = document.getElementById('main-header');
             const logoLight = document.getElementById('logo-light');
             const logoDark = document.getElementById('logo-dark');
@@ -173,25 +273,29 @@
             const contactBtn = document.getElementById('contact-btn');
             const mobileBtn = document.getElementById('mobile-menu-button');
 
-            if (window.scrollY > 50) {
-                header.classList.remove('bg-transparent', 'py-4');
-                header.classList.add('bg-white/95', 'dark:bg-background-dark/95', 'backdrop-blur-md', 'shadow-md', 'py-2');
-                logoLight.classList.add('hidden');
-                logoDark.classList.remove('hidden');
-                navLinks.forEach(link => { link.classList.replace('text-white', 'text-gray-600'); });
-                contactBtn.classList.replace('bg-white', 'bg-primary');
-                contactBtn.classList.replace('text-primary', 'text-white');
-                mobileBtn.classList.replace('text-white', 'text-primary');
-            } else {
-                header.classList.add('bg-transparent', 'py-4');
-                header.classList.remove('bg-white/95', 'dark:bg-background-dark/95', 'backdrop-blur-md', 'shadow-md', 'py-2');
-                logoLight.classList.remove('hidden');
-                logoDark.classList.add('hidden');
-                navLinks.forEach(link => { link.classList.add('text-white'); link.classList.remove('text-gray-600'); });
-                contactBtn.classList.replace('bg-primary', 'bg-white');
-                contactBtn.classList.replace('text-white', 'text-primary');
-                mobileBtn.classList.replace('text-primary', 'text-white');
-            }
+            window.addEventListener('scroll', () => {
+                window.requestAnimationFrame(() => {
+                    if (window.scrollY > 50) {
+                        header.classList.add('bg-white/95', 'dark:bg-background-dark/95', 'backdrop-blur-md', 'shadow-md', 'py-2');
+                        header.classList.remove('bg-transparent', 'py-4');
+                        logoLight.classList.add('hidden');
+                        logoDark.classList.remove('hidden');
+                        navLinks.forEach(link => link.classList.replace('text-white', 'text-gray-600'));
+                        contactBtn?.classList.replace('bg-white', 'bg-primary');
+                        contactBtn?.classList.replace('text-primary', 'text-white');
+                        mobileBtn?.classList.replace('text-white', 'text-primary');
+                    } else {
+                        header.classList.add('bg-transparent', 'py-4');
+                        header.classList.remove('bg-white/95', 'dark:bg-background-dark/95', 'backdrop-blur-md', 'shadow-md', 'py-2');
+                        logoLight.classList.remove('hidden');
+                        logoDark.classList.add('hidden');
+                        navLinks.forEach(link => { link.classList.add('text-white'); link.classList.remove('text-gray-600'); });
+                        contactBtn?.classList.replace('bg-primary', 'bg-white');
+                        contactBtn?.classList.replace('text-white', 'text-primary');
+                        mobileBtn?.classList.replace('text-primary', 'text-white');
+                    }
+                });
+            }, { passive: true });
         });
     </script>
 </body>
