@@ -61,6 +61,29 @@
                 "desc": "Jugosos trozos de lomo fino salteados con vegetales.",
                 "img": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=200"
             }
+        ],
+        "opiniones": [
+            {
+                "usuario": "Sofia M.",
+                "avatar": "https://i.pravatar.cc/100?u=1",
+                "fecha": "Hace 2 días",
+                "puntuacion": 5,
+                "comentario": "La comida es espectacular, especialmente el lomo saltado de alpaca. El ambiente es muy acogedor y el servicio de primera."
+            },
+            {
+                "usuario": "Carlos R.",
+                "avatar": "https://i.pravatar.cc/100?u=2",
+                "fecha": "Hace 1 semana",
+                "puntuacion": 4,
+                "comentario": "Excelente lugar para cenar en Cusco. Los ingredientes se sienten muy frescos. El Cuy Chactado es crujiente y delicioso."
+            },
+            {
+                "usuario": "Elena Valdés",
+                "avatar": "https://i.pravatar.cc/100?u=3",
+                "fecha": "Hace 2 semanas",
+                "puntuacion": 5,
+                "comentario": "Increíble la decoración y la música en vivo le da un toque mágico. Definitivamente volveré en mi próximo viaje."
+            }
         ]
     }
 ]
