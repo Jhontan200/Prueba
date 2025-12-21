@@ -1,0 +1,13 @@
+@keyframes kenburns {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+.hero-slide.opacity-100 {
+    animation: kenburns 6s ease-out forwards;
+}

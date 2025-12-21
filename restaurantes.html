@@ -6,7 +6,6 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <meta name="description" content="Maki Catta - Explora los mejores 6 restaurantes y destinos exclusivos.">
     <title>Maki Catta - Restaurantes</title>
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -15,30 +14,7 @@
         rel="stylesheet" />
 
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
-    <script>
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        primary: "#3E2723",
-                        secondary: "#A1887F",
-                        accent: "#FFE0B2",
-                        "background-light": "#FDFBF7",
-                        "background-dark": "#1A1614",
-                        "card-light": "#FFFFFF",
-                        "card-dark": "#2C2420",
-                        "footer-custom": "#291B0A",
-                    },
-                    fontFamily: {
-                        display: ["Alegreya", "serif"],
-                        button: ["'Exo 2'", "sans-serif"],
-                        body: ["Dosis", "sans-serif"],
-                    },
-                },
-            },
-        };
-    </script>
+    <link rel="stylesheet" href="css/restaurantes.css">
 </head>
 
 <body
@@ -63,7 +39,7 @@
                     <a class="nav-link text-white/90 hover:text-accent font-medium transition"
                         href="#hoteles">Hoteles</a>
                     <a class="nav-link text-white/90 hover:text-accent font-medium transition"
-                        href="#restaurantes">Restaurantes</a>
+                        href="restaurantes.html">Restaurantes</a>
                     <a id="contact-btn"
                         class="px-5 py-2 rounded-full bg-white text-primary hover:bg-accent transition font-bold text-sm shadow-sm"
                         href="#contacto">
@@ -72,21 +48,43 @@
                 </div>
 
                 <div class="md:hidden">
-                    <button id="mobile-menu-button" class="text-white focus:outline-none" aria-label="Menu">
-                        <span class="material-icons-outlined text-3xl">menu</span>
+                    <button id="mobile-menu-button"
+                        class="text-white focus:outline-none transition-transform active:scale-90" aria-label="Menu">
+                        <span id="menu-icon" class="material-icons-outlined text-4xl">menu</span>
                     </button>
                 </div>
             </div>
         </nav>
+
+        <div id="mobile-menu"
+            class="hidden absolute top-0 left-0 w-full h-screen bg-card-light/95 dark:bg-card-dark/95 backdrop-blur-xl z-[-1] flex-col items-center justify-center gap-6 p-8 transition-all duration-300 border-b border-primary/10">
+            <a class="mobile-nav-link text-primary dark:text-white text-3xl font-display font-bold" href="#">Inicio</a>
+            <a class="mobile-nav-link text-primary dark:text-white text-3xl font-display font-bold"
+                href="#destinos">Destinos</a>
+            <a class="mobile-nav-link text-primary dark:text-white text-3xl font-display font-bold"
+                href="#hoteles">Hoteles</a>
+            <a class="mobile-nav-link text-primary dark:text-white text-3xl font-display font-bold"
+                href="restaurantes.html">Restaurantes</a>
+            <a class="mt-4 px-10 py-4 rounded-full bg-primary text-white font-button font-bold text-xl shadow-xl active:scale-95 transition-transform"
+                href="#contacto">
+                Contáctenos
+            </a>
+        </div>
     </header>
 
     <main class="flex min-h-screen flex-col">
-        <section class="relative flex min-h-[500px] flex-col justify-center overflow-hidden bg-slate-900 py-12">
+        <section class="relative flex min-h-[600px] flex-col justify-center overflow-hidden bg-slate-900 py-12">
             <div class="absolute inset-0 z-0">
-                <div class="h-full w-full bg-cover bg-center bg-no-repeat opacity-60"
-                    style='background-image: url("imagenes/hero-bg.webp");'></div>
+                <div class="hero-slide absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-1000 opacity-100"
+                    style='background-image: url("imagenes/fondo1.jpg");'></div>
+                <div class="hero-slide absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-1000 opacity-0"
+                    style='background-image: url("imagenes/fondo2.jpg");'></div>
+                <div class="hero-slide absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-1000 opacity-0"
+                    style='background-image: url("imagenes/fondo3.jpg");'></div>
+
                 <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent"></div>
             </div>
+
             <div class="relative z-10 mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
                 <div class="max-w-2xl">
                     <div
@@ -113,14 +111,14 @@
                     class="group relative flex flex-col overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg dark:border-slate-800 dark:bg-slate-900">
                     <div class="relative h-60 w-full overflow-hidden">
                         <img class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                            src="imagenes/restaurante-1.webp" alt="Restaurante 1" width="400" height="240"
+                            src="imagenes/la-varangue.jpg" alt="Restaurant La Varangue" width="400" height="240"
                             loading="lazy" />
                         <div
                             class="absolute right-3 top-3 rounded-lg bg-white/90 px-2.5 py-1 text-xs font-bold text-slate-900 backdrop-blur-sm dark:bg-slate-900/90 dark:text-white font-button">
                             $$$</div>
                     </div>
                     <div class="flex flex-1 flex-col p-5">
-                        <h2 class="text-xl font-display font-bold text-slate-900 dark:text-white">La Marea Azul</h2>
+                        <h2 class="text-xl font-display font-bold text-slate-900 dark:text-white">La Varangue</h2>
                         <p class="mt-2 text-sm font-body text-slate-600 dark:text-slate-300">Cocina mediterránea con la
                             pesca más fresca.</p>
                         <button
@@ -133,14 +131,14 @@
                     class="group relative flex flex-col overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg dark:border-slate-800 dark:bg-slate-900">
                     <div class="relative h-60 w-full overflow-hidden">
                         <img class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                            src="imagenes/restaurante-2.webp" alt="Restaurante 2" width="400" height="240"
+                            src="imagenes/LHeure_Bleue.jpg" alt="Restaurant Le Rossini" width="400" height="240"
                             loading="lazy" />
                         <div
                             class="absolute right-3 top-3 rounded-lg bg-white/90 px-2.5 py-1 text-xs font-bold text-slate-900 backdrop-blur-sm dark:bg-slate-900/90 dark:text-white font-button">
                             $$</div>
                     </div>
                     <div class="flex flex-1 flex-col p-5">
-                        <h2 class="text-xl font-display font-bold text-slate-900 dark:text-white">El Olivo Dorado</h2>
+                        <h2 class="text-xl font-display font-bold text-slate-900 dark:text-white">L'Heure Bleue</h2>
                         <p class="mt-2 text-sm font-body text-slate-600 dark:text-slate-300">Sabores tradicionales con
                             un toque contemporáneo.</p>
                         <button
@@ -153,14 +151,15 @@
                     class="group relative flex flex-col overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg dark:border-slate-800 dark:bg-slate-900">
                     <div class="relative h-60 w-full overflow-hidden">
                         <img class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                            src="imagenes/restaurante-3.webp" alt="Restaurante 3" width="400" height="240"
+                            src="imagenes/Valahara_Antsirabe.jpg" alt="Valahara Antsirabe" width="400" height="240"
                             loading="lazy" />
                         <div
                             class="absolute right-3 top-3 rounded-lg bg-white/90 px-2.5 py-1 text-xs font-bold text-slate-900 backdrop-blur-sm dark:bg-slate-900/90 dark:text-white font-button">
                             $$$$</div>
                     </div>
                     <div class="flex flex-1 flex-col p-5">
-                        <h2 class="text-xl font-display font-bold text-slate-900 dark:text-white">Corte Supremo</h2>
+                        <h2 class="text-xl font-display font-bold text-slate-900 dark:text-white">Valahara Antsirabe
+                        </h2>
                         <p class="mt-2 text-sm font-body text-slate-600 dark:text-slate-300">Las mejores carnes
                             maduradas a la brasa.</p>
                         <button
@@ -173,14 +172,13 @@
                     class="group relative flex flex-col overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg dark:border-slate-800 dark:bg-slate-900">
                     <div class="relative h-60 w-full overflow-hidden">
                         <img class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                            src="imagenes/restaurante-4.webp" alt="Restaurante 4" width="400" height="240"
-                            loading="lazy" />
+                            src="imagenes/Su_e_Giu.jpg" alt="Su e Giu" width="400" height="240" loading="lazy" />
                         <div
                             class="absolute right-3 top-3 rounded-lg bg-white/90 px-2.5 py-1 text-xs font-bold text-slate-900 backdrop-blur-sm dark:bg-slate-900/90 dark:text-white font-button">
                             $$</div>
                     </div>
                     <div class="flex flex-1 flex-col p-5">
-                        <h2 class="text-xl font-display font-bold text-slate-900 dark:text-white">Sakura Zen</h2>
+                        <h2 class="text-xl font-display font-bold text-slate-900 dark:text-white">Su e Giu</h2>
                         <p class="mt-2 text-sm font-body text-slate-600 dark:text-slate-300">Sushi de autor y cocina
                             fusión japonesa.</p>
                         <button
@@ -193,14 +191,14 @@
                     class="group relative flex flex-col overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg dark:border-slate-800 dark:bg-slate-900">
                     <div class="relative h-60 w-full overflow-hidden">
                         <img class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                            src="imagenes/restaurante-5.webp" alt="Restaurante 5" width="400" height="240"
+                            src="imagenes/la_plantation.jpg" alt="La Plantation" width="400" height="240"
                             loading="lazy" />
                         <div
                             class="absolute right-3 top-3 rounded-lg bg-white/90 px-2.5 py-1 text-xs font-bold text-slate-900 backdrop-blur-sm dark:bg-slate-900/90 dark:text-white font-button">
                             $$$</div>
                     </div>
                     <div class="flex flex-1 flex-col p-5">
-                        <h2 class="text-xl font-display font-bold text-slate-900 dark:text-white">Brisa de Mar</h2>
+                        <h2 class="text-xl font-display font-bold text-slate-900 dark:text-white">La Plantation</h2>
                         <p class="mt-2 text-sm font-body text-slate-600 dark:text-slate-300">Mariscos y cócteles frente
                             a la playa.</p>
                         <button
@@ -213,14 +211,13 @@
                     class="group relative flex flex-col overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg dark:border-slate-800 dark:bg-slate-900">
                     <div class="relative h-60 w-full overflow-hidden">
                         <img class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                            src="imagenes/restaurante-6.webp" alt="Restaurante 6" width="400" height="240"
-                            loading="lazy" />
+                            src="imagenes/Lorion.jpg" alt="L'Orion" width="400" height="240" loading="lazy" />
                         <div
                             class="absolute right-3 top-3 rounded-lg bg-white/90 px-2.5 py-1 text-xs font-bold text-slate-900 backdrop-blur-sm dark:bg-slate-900/90 dark:text-white font-button">
                             $$$</div>
                     </div>
                     <div class="flex flex-1 flex-col p-5">
-                        <h2 class="text-xl font-display font-bold text-slate-900 dark:text-white">La Trattoria</h2>
+                        <h2 class="text-xl font-display font-bold text-slate-900 dark:text-white">L'Orion</h2>
                         <p class="mt-2 text-sm font-body text-slate-600 dark:text-slate-300">Pastas artesanales y pizzas
                             al horno de leña.</p>
                         <button
@@ -249,12 +246,20 @@
                     <ul class="space-y-2 text-sm">
                         <li><a class="hover:text-white transition" href="#">Inicio</a></li>
                         <li><a class="hover:text-white transition" href="#destinos">Destinos</a></li>
+                        <li><a class="hover:text-white transition" href="#destinos">Hoteles</a></li>
+                        <li><a class="hover:text-white transition" href="restaurantes.html">Restaurantes</a></li>
+                        <li><a class="hover:text-white transition" href="#destinos">Contáctenos</a></li>
                     </ul>
                 </div>
                 <div class="font-button">
                     <h4 class="text-white font-bold mb-4 uppercase text-xs tracking-wider">Legales</h4>
                     <ul class="space-y-2 text-sm">
-                        <li><a class="hover:text-white transition" href="#">Privacidad</a></li>
+                        <li><a class="hover:text-white transition" href="politicias_privacidad.html">Políticas de
+                                Privacidad</a></li>
+                        <li><a class="hover:text-white transition" href="politicias_privacidad.html">Términos de Uso</a>
+                        </li>
+                        <li><a class="hover:text-white transition" href="politicias_privacidad.html">Sobre Nosotros</a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -263,41 +268,9 @@
             </div>
         </div>
     </footer>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const header = document.getElementById('main-header');
-            const logoLight = document.getElementById('logo-light');
-            const logoDark = document.getElementById('logo-dark');
-            const navLinks = document.querySelectorAll('.nav-link');
-            const contactBtn = document.getElementById('contact-btn');
-            const mobileBtn = document.getElementById('mobile-menu-button');
-
-            window.addEventListener('scroll', () => {
-                window.requestAnimationFrame(() => {
-                    if (window.scrollY > 50) {
-                        header.classList.add('bg-white/95', 'dark:bg-background-dark/95', 'backdrop-blur-md', 'shadow-md', 'py-2');
-                        header.classList.remove('bg-transparent', 'py-4');
-                        logoLight.classList.add('hidden');
-                        logoDark.classList.remove('hidden');
-                        navLinks.forEach(link => link.classList.replace('text-white', 'text-gray-600'));
-                        contactBtn?.classList.replace('bg-white', 'bg-primary');
-                        contactBtn?.classList.replace('text-primary', 'text-white');
-                        mobileBtn?.classList.replace('text-white', 'text-primary');
-                    } else {
-                        header.classList.add('bg-transparent', 'py-4');
-                        header.classList.remove('bg-white/95', 'dark:bg-background-dark/95', 'backdrop-blur-md', 'shadow-md', 'py-2');
-                        logoLight.classList.remove('hidden');
-                        logoDark.classList.add('hidden');
-                        navLinks.forEach(link => { link.classList.add('text-white'); link.classList.remove('text-gray-600'); });
-                        contactBtn?.classList.replace('bg-primary', 'bg-white');
-                        contactBtn?.classList.replace('text-white', 'text-primary');
-                        mobileBtn?.classList.replace('text-primary', 'text-white');
-                    }
-                });
-            }, { passive: true });
-        });
-    </script>
+    <script src="js/tailwind.config.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/restaurantes_main.js"></script>
 </body>
 
 </html>

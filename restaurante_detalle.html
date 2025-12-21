@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html class="light" lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Maki Catta - Detalle de Restaurante</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Dosis:wght@200..800&family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="css/detalle_restaurante.css">
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-gray-800 dark:text-gray-200 font-body transition-colors duration-300">
+
+    <header id="main-header" class="fixed w-full z-[120] transition-all duration-300 bg-transparent py-4 font-button">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex-shrink-0">
+                    <a href="#">
+                        <img id="logo-light" src="imagenes/logo_blanco.webp" alt="Logo" width="160" height="64"
+                            fetchpriority="high" class="h-16 w-auto object-contain">
+                        <img id="logo-dark" src="imagenes/logo.webp" alt="Logo" width="160" height="64"
+                            class="hidden h-16 w-auto object-contain">
+                    </a>
+                </div>
+
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a class="nav-link text-white hover:text-accent font-medium transition" href="#">Inicio</a>
+                    <a class="nav-link text-white/90 hover:text-accent font-medium transition"
+                        href="#destinos">Destinos</a>
+                    <a class="nav-link text-white/90 hover:text-accent font-medium transition"
+                        href="#hoteles">Hoteles</a>
+                    <a class="nav-link text-white/90 hover:text-accent font-medium transition"
+                        href="restaurantes.html">Restaurantes</a>
+                    <a id="contact-btn"
+                        class="px-5 py-2 rounded-full bg-white text-primary hover:bg-accent transition font-bold text-sm shadow-sm"
+                        href="#contacto">
+                        Contáctenos
+                    </a>
+                </div>
+
+                <div class="md:hidden">
+                    <button id="mobile-menu-button"
+                        class="text-white focus:outline-none transition-transform active:scale-90" aria-label="Menu">
+                        <span id="menu-icon" class="material-icons-outlined text-4xl">menu</span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <div id="mobile-menu"
+            class="hidden absolute top-0 left-0 w-full h-screen bg-white dark:bg-card-dark z-[-1] flex-col items-center justify-center gap-6 p-8 transition-all duration-300">
+            <a class="mobile-nav-link text-primary dark:text-white text-3xl font-display font-bold" href="#">Inicio</a>
+            <a class="mobile-nav-link text-primary dark:text-white text-3xl font-display font-bold"
+                href="#destinos">Destinos</a>
+            <a class="mobile-nav-link text-primary dark:text-white text-3xl font-display font-bold"
+                href="#hoteles">Hoteles</a>
+            <a class="mobile-nav-link text-primary dark:text-white text-3xl font-display font-bold"
+                href="restaurantes.html">Restaurantes</a>
+            <a class="mt-4 px-10 py-4 rounded-full bg-primary text-white font-button font-bold text-xl shadow-xl active:scale-95 transition-transform"
+                href="#contacto">
+                Contáctenos
+            </a>
+        </div>
+    </header>
+
+    <div class="relative w-full h-[650px] lg:h-[85vh] min-h-[600px] bg-primary group overflow-hidden">
+        <input checked class="hidden peer/s1" id="slide1" name="hero-slider" type="radio" />
+        <input class="hidden peer/s2" id="slide2" name="hero-slider" type="radio" />
+        <input class="hidden peer/s3" id="slide3" name="hero-slider" type="radio" />
+        <input class="hidden peer/s4" id="slide4" name="hero-slider" type="radio" />
+        <input class="hidden peer/s5" id="slide5" name="hero-slider" type="radio" />
+
+        <div
+            class="absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out opacity-0 peer-checked/s1:opacity-100 z-0">
+            <div class="absolute inset-0 bg-cover bg-center transform scale-105 peer-checked/s1:scale-100 transition-transform duration-[2000ms]"
+                style='background-image: url("https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1600&q=80");'>
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/20 to-black/80"></div>
+        </div>
+        <div
+            class="absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out opacity-0 peer-checked/s2:opacity-100 z-0">
+            <div class="absolute inset-0 bg-cover bg-center transform scale-105 peer-checked/s2:scale-100 transition-transform duration-[2000ms]"
+                style='background-image: url("https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=1600&q=80");'>
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/20 to-black/80"></div>
+        </div>
+        <div
+            class="absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out opacity-0 peer-checked/s3:opacity-100 z-0">
+            <div class="absolute inset-0 bg-cover bg-center transform scale-105 peer-checked/s3:scale-100 transition-transform duration-[2000ms]"
+                style='background-image: url("https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1600&q=80");'>
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/20 to-black/80"></div>
+        </div>
+        <div
+            class="absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out opacity-0 peer-checked/s4:opacity-100 z-0">
+            <div class="absolute inset-0 bg-cover bg-center transform scale-105 peer-checked/s4:scale-100 transition-transform duration-[2000ms]"
+                style='background-image: url("https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=1600&q=80");'>
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/20 to-black/80"></div>
+        </div>
+        <div
+            class="absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out opacity-0 peer-checked/s5:opacity-100 z-0">
+            <div class="absolute inset-0 bg-cover bg-center transform scale-105 peer-checked/s5:scale-100 transition-transform duration-[2000ms]"
+                style='background-image: url("https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1600&q=80");'>
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/20 to-black/80"></div>
+        </div>
+
+        <div
+            class="absolute bottom-0 w-full z-30 px-4 lg:px-10 py-12 pb-24 max-w-7xl mx-auto left-0 right-0 flex flex-col gap-6 font-button">
+            <nav aria-label="Breadcrumb" class="flex">
+                <ol class="inline-flex items-center space-x-2 md:space-x-3 text-sm font-medium text-white/70">
+                    <li class="inline-flex items-center"><a class="hover:text-white transition-colors"
+                            href="#">Inicio</a></li>
+                    <li>
+                        <div class="flex items-center"><span
+                                class="material-symbols-outlined text-white/50 text-sm mx-1">chevron_right</span><a
+                                class="hover:text-white transition-colors" href="#">Restaurantes</a></div>
+                    </li>
+                    <li aria-current="page">
+                        <div class="flex items-center"><span
+                                class="material-symbols-outlined text-white/50 text-sm mx-1">chevron_right</span><span
+                                class="text-white">El Fogón de los Andes</span></div>
+                    </li>
+                </ol>
+            </nav>
+            <div class="flex flex-col md:flex-row justify-between items-end gap-8">
+                <div class="flex flex-col gap-4 max-w-4xl">
+                    <h1
+                        class="text-5xl md:text-6xl font-display font-black tracking-tight text-white leading-none drop-shadow-md">
+                        El
+                        Fogón de los Andes</h1>
+                    <div class="flex flex-wrap items-center gap-4 text-white/90 text-sm font-medium">
+                        <span class="inline-flex items-center gap-1 text-[#FBBF24] font-bold"><span
+                                class="material-symbols-outlined fill-current text-[20px]">star</span>4.8 (240
+                            reseñas)</span>
+                        <span class="text-white/40">•</span><span>Comida Típica Andina</span>
+                        <span class="text-white/40">•</span><span>$$$</span>
+                        <span class="text-white/40">•</span><a
+                            class="underline decoration-white/50 underline-offset-4 hover:text-white"
+                            href="#location">Cusco, Perú</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div
+        class="w-full bg-card-light dark:bg-card-dark border-b border-secondary/20 shadow-sm sticky top-0 z-40 font-button">
+        <div class="max-w-7xl mx-auto px-4 lg:px-10 py-4 flex gap-4 items-center overflow-x-auto">
+            <button
+                class="flex items-center gap-2 px-6 py-2.5 rounded-lg border border-secondary text-primary dark:text-accent font-bold hover:bg-accent/20 transition-all whitespace-nowrap"><span
+                    class="material-symbols-outlined text-[20px]">share</span> Compartir</button>
+            <button id="btn-open-gallery"
+                class="flex items-center gap-2 px-6 py-2.5 rounded-lg bg-primary text-white font-bold hover:bg-primary/90 transition-all shadow-md whitespace-nowrap"><span
+                    class="material-symbols-outlined text-[20px]">grid_view</span> Ver fotos</button>
+        </div>
+    </div>
+
+    <main class="flex-grow w-full max-w-7xl mx-auto px-4 md:px-10 py-12 pb-20">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+            <div class="lg:col-span-2 flex flex-col gap-10">
+                <div class="bg-card-light dark:bg-card-dark rounded-xl p-6 md:p-8 shadow-sm border border-secondary/10">
+                    <h3 class="text-2xl font-display font-bold text-primary dark:text-accent mb-4">Sobre el Restaurante
+                    </h3>
+                    <div
+                        class="prose max-w-none text-base leading-relaxed text-primary/80 dark:text-white/80 font-body">
+                        <p class="mb-4">Disfruta de una experiencia culinaria única con los mejores sabores de la sierra
+                            peruana. Nuestro restaurante "El Fogón de los Andes" ofrece ingredientes orgánicos
+                            cultivados localmente en las comunidades cercanas y recetas ancestrales.</p>
+                        <p class="mb-4">Ubicado en una casona colonial restaurada, el ambiente combina lo rústico con lo
+                            elegante. Nuestra especialidad es el Cuy Chactado y el Lomo Saltado de Alpaca.</p>
+                    </div>
+                    <div class="mt-8 pt-8 border-t border-secondary/20">
+                        <h4 class="text-lg font-display font-bold mb-4 text-primary dark:text-accent">Servicios y
+                            Amenidades</h4>
+                        <div class="grid grid-cols-2 md:grid-cols-3 gap-y-4 gap-x-8 font-body">
+                            <div class="flex items-center gap-3 text-secondary"><span
+                                    class="material-symbols-outlined">wifi</span><span class="text-sm font-medium">Wi-Fi
+                                    Gratis</span></div>
+                            <div class="flex items-center gap-3 text-secondary"><span
+                                    class="material-symbols-outlined">deck</span><span
+                                    class="text-sm font-medium">Terraza</span></div>
+                            <div class="flex items-center gap-3 text-secondary"><span
+                                    class="material-symbols-outlined">local_parking</span><span
+                                    class="text-sm font-medium">Estacionamiento</span></div>
+                            <div class="flex items-center gap-3 text-secondary"><span
+                                    class="material-symbols-outlined">wine_bar</span><span
+                                    class="text-sm font-medium">Bar Completo</span></div>
+                            <div class="flex items-center gap-3 text-secondary"><span
+                                    class="material-symbols-outlined">payments</span><span
+                                    class="text-sm font-medium">Acepta Tarjetas</span></div>
+                            <div class="flex items-center gap-3 text-secondary"><span
+                                    class="material-symbols-outlined">music_note</span><span
+                                    class="text-sm font-medium">Música en Vivo</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-card-light dark:bg-card-dark rounded-xl p-6 md:p-8 shadow-sm border border-secondary/10">
+                    <div class="flex items-center justify-between mb-6">
+                        <h3 class="text-2xl font-display font-bold text-primary dark:text-accent">Opiniones</h3>
+                        <a class="text-secondary font-button font-medium hover:underline decoration-accent" href="#">Ver
+                            todas
+                            (240)</a>
+                    </div>
+                    <div class="flex gap-4 mb-6 pb-6 border-b border-secondary/20">
+                        <div class="flex-shrink-0 size-10 rounded-full bg-accent/30 bg-center bg-cover"
+                            style='background-image: url("https://i.pravatar.cc/100?u=1");'></div>
+                        <div class="font-body">
+                            <div class="flex items-center gap-2 mb-1"><span
+                                    class="font-bold text-primary dark:text-white">Sofia
+                                    M.</span><span class="text-secondary/50 text-sm">• Hace 2 días</span></div>
+                            <div class="flex text-[#D97706] mb-2">
+                                <span class="material-symbols-outlined text-[16px] fill-current">star</span><span
+                                    class="material-symbols-outlined text-[16px] fill-current">star</span><span
+                                    class="material-symbols-outlined text-[16px] fill-current">star</span><span
+                                    class="material-symbols-outlined text-[16px] fill-current">star</span><span
+                                    class="material-symbols-outlined text-[16px] fill-current">star</span>
+                            </div>
+                            <p class="text-primary/80 dark:text-white/80 text-sm">"La comida es espectacular,
+                                especialmente el lomo
+                                saltado de alpaca. El ambiente es muy acogedor y el servicio de primera."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lg:col-span-1">
+                <div class="sticky top-24 flex flex-col gap-6">
+                    <div
+                        class="bg-card-light dark:bg-card-dark rounded-xl shadow-lg border border-secondary/10 overflow-hidden">
+                        <div class="w-full h-40 bg-accent/30 relative group cursor-pointer" id="location">
+                            <div class="w-full h-full bg-center bg-cover opacity-80 group-hover:opacity-100 transition-opacity"
+                                style='background-image: url("https://images.unsplash.com/photo-1526772662000-3f88f10405ff?w=400");'>
+                            </div>
+                            <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                                <div
+                                    class="bg-primary text-white p-2 rounded-full shadow-lg transform -translate-y-2 group-hover:-translate-y-3 transition-transform">
+                                    <span class="material-symbols-outlined">location_on</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6 flex flex-col gap-4 font-body">
+                            <div class="flex items-start gap-3"><span
+                                    class="material-symbols-outlined text-secondary mt-0.5">location_on</span>
+                                <div>
+                                    <p class="font-bold text-sm text-primary dark:text-accent">Dirección</p>
+                                    <p class="text-sm text-primary/70 dark:text-white/70">Calle Plateros 326, Cusco
+                                        08000, Perú</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3"><span
+                                    class="material-symbols-outlined text-secondary mt-0.5">schedule</span>
+                                <div>
+                                    <p class="font-bold text-sm text-primary dark:text-accent">Horario de Hoy</p>
+                                    <p class="text-sm text-green-700 font-medium">Abierto ahora • Cierra 10:00 PM</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="bg-card-light dark:bg-card-dark rounded-xl shadow-lg hover:shadow-xl transition-shadow border border-secondary/20 p-6 relative overflow-hidden group/card">
+                        <div
+                            class="absolute top-0 right-0 p-4 opacity-5 pointer-events-none transition-opacity group-hover/card:opacity-10">
+                            <span class="material-symbols-outlined text-[120px] text-primary">restaurant_menu</span>
+                        </div>
+                        <h3
+                            class="font-display font-bold text-primary dark:text-accent mb-4 flex items-center gap-2 relative z-10">
+                            <span class="material-symbols-outlined text-[22px]">restaurant_menu</span>Platos
+                            Destacados
+                        </h3>
+                        <div class="flex flex-col gap-3 relative z-10 font-body">
+                            <div
+                                class="flex gap-4 items-start p-3 rounded-lg bg-background-light dark:bg-card-dark hover:shadow-md transition-all border border-secondary/30 group">
+                                <div class="w-16 h-16 shrink-0 rounded-md bg-cover bg-center shadow-sm group-hover:scale-105 transition-transform duration-300"
+                                    style='background-image: url("https://images.unsplash.com/photo-1544025162-d76694265947?w=200");'>
+                                </div>
+                                <div>
+                                    <h5
+                                        class="font-display font-bold text-sm text-primary dark:text-accent leading-tight">
+                                        Cuy Chactado</h5>
+                                    <p class="text-xs text-primary/60 dark:text-white/60 mt-1">Tradicional cuy frito
+                                        acompañado de papas
+                                        doradas y maíz.</p>
+                                </div>
+                            </div>
+                            <div
+                                class="flex gap-4 items-start p-3 rounded-lg bg-background-light dark:bg-card-dark hover:shadow-md transition-all border border-secondary/30 group">
+                                <div class="w-16 h-16 shrink-0 rounded-md bg-cover bg-center shadow-sm group-hover:scale-105 transition-transform duration-300"
+                                    style='background-image: url("https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=200");'>
+                                </div>
+                                <div>
+                                    <h5
+                                        class="font-display font-bold text-sm text-primary dark:text-accent leading-tight">
+                                        Lomo Saltado</h5>
+                                    <p class="text-xs text-primary/60 dark:text-white/60 mt-1">Jugosos trozos de lomo
+                                        fino salteados con
+                                        vegetales.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="bg-footer-custom text-gray-400 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-8 text-center md:text-left">
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex justify-center md:justify-start items-center gap-2 mb-4">
+                        <img src="imagenes/logo_footer.webp" alt="Logo" width="120" height="48"
+                            class="h-12 w-auto object-contain" loading="lazy">
+                    </div>
+                    <p class="text-sm font-body max-w-xs mx-auto md:mx-0">Explorando el mundo, un destino a la vez. Tu
+                        socio de confianza para viajes inolvidables.</p>
+                </div>
+                <div class="font-button">
+                    <h4 class="text-white font-bold mb-4 uppercase text-xs tracking-wider">Enlaces</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a class="hover:text-white transition" href="#">Inicio</a></li>
+                        <li><a class="hover:text-white transition" href="#destinos">Destinos</a></li>
+                        <li><a class="hover:text-white transition" href="#destinos">Hoteles</a></li>
+                        <li><a class="hover:text-white transition" href="restaurantes.html">Restaurantes</a></li>
+                        <li><a class="hover:text-white transition" href="#destinos">Contáctenos</a></li>
+                    </ul>
+                </div>
+                <div class="font-button">
+                    <h4 class="text-white font-bold mb-4 uppercase text-xs tracking-wider">Legales</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a class="hover:text-white transition" href="politicias_privacidad.html">Políticas de
+                                Privacidad</a></li>
+                        <li><a class="hover:text-white transition" href="politicias_privacidad.html">Términos de Uso</a>
+                        </li>
+                        <li><a class="hover:text-white transition" href="politicias_privacidad.html">Sobre Nosotros</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-xs font-body">
+                <p>© 2023 Maki Catta Turismo. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="gallery-modal" class="fixed inset-0 z-[150] hidden bg-black/95 backdrop-blur-md flex flex-col">
+        <button id="close-gallery" class="absolute top-4 right-4 z-[170] text-white/70 hover:text-white p-2">
+            <span class="material-symbols-outlined text-4xl md:text-5xl">close</span>
+        </button>
+
+        <div class="flex-grow flex items-center justify-center relative touch-pan-y">
+            <button id="prev-photo"
+                class="hidden md:flex absolute left-4 z-[160] text-white/50 hover:text-white bg-white/10 p-3 rounded-full transition-all">
+                <span class="material-symbols-outlined text-4xl">chevron_left</span>
+            </button>
+
+            <div class="w-full h-full flex items-center justify-center p-2 md:p-10">
+                <img id="main-gallery-img" src=""
+                    class="max-w-full max-h-[50vh] md:max-h-[60vh] object-contain rounded-sm md:rounded-lg shadow-2xl transition-opacity duration-300"
+                    alt="Foto restaurante">
+            </div>
+
+            <button id="next-photo"
+                class="hidden md:flex absolute right-4 z-[160] text-white/50 hover:text-white bg-white/10 p-3 rounded-full transition-all">
+                <span class="material-symbols-outlined text-4xl">chevron_right</span>
+            </button>
+        </div>
+
+        <div
+            class="h-28 md:h-32 w-full bg-black/60 border-t border-white/10 flex items-center overflow-x-auto no-scrollbar px-4">
+            <div id="thumb-container" class="flex gap-2 md:gap-4 mx-auto py-2">
+            </div>
+        </div>
+    </div>
+    <script src="js/tailwind.config.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/detalle_restaurante.js"></script>
+</body>
+
+</html>
