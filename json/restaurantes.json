@@ -1,88 +1,324 @@
 [
     {
         "id": 1,
-        "nombre": "El Fogón de los Andes",
-        "categoria": "Comida Típica Andina",
-        "precio": "$$$",
-        "puntuacion": 4.8,
-        "resenas_conteo": 240,
-        "ciudad": "Cusco",
-        "pais": "Perú",
+        "nombre": "La Varangue",
+        "categoria": "Alta Cocina Francesa-Malgache",
+        "precio": "$$$$",
+        "puntuacion": 4.9,
+        "resenas_conteo": 310,
+        "ciudad": "Antananarivo",
+        "pais": "Madagascar",
         "descripcion": [
-            "Disfruta de una experiencia culinaria única con los mejores sabores de la sierra peruana. Nuestro restaurante 'El Fogón de los Andes' ofrece ingredientes orgánicos cultivados localmente.",
-            "Ubicado en una casona colonial restaurada, el ambiente combina lo rústico con lo elegante. Nuestra especialidad es el Cuy Chactado y el Lomo Saltado de Alpaca."
+            "Considerado uno de los mejores restaurantes de la capital, La Varangue ofrece una fusión sofisticada de técnicas francesas con ingredientes locales de Madagascar.",
+            "Ubicado en un entorno histórico lleno de antigüedades, es famoso por su exquisito Foie Gras y su selección de carnes de cebú."
         ],
         "imagenes": [
-            "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1600",
-            "https://images.unsplash.com/photo-1552566626-52f8b828add9?w=1600",
-            "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1600",
-            "https://images.unsplash.com/photo-1559339352-11d035aa65de?w=1600",
-            "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1600"
+            "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=1600",
+            "https://images.unsplash.com/photo-1550966842-28c2e2eb0b51?w=1600"
         ],
         "servicios": [
             {
-                "icon": "wifi",
-                "label": "Wi-Fi Gratis"
+                "icon": "wine_bar",
+                "label": "Cava de Vinos"
             },
             {
                 "icon": "deck",
-                "label": "Terraza"
-            },
-            {
-                "icon": "local_parking",
-                "label": "Estacionamiento"
-            },
-            {
-                "icon": "wine_bar",
-                "label": "Bar Completo"
+                "label": "Terraza Jardín"
             },
             {
                 "icon": "payments",
                 "label": "Acepta Tarjetas"
             },
             {
-                "icon": "music_note",
-                "label": "Música en Vivo"
+                "icon": "local_parking",
+                "label": "Valet Parking"
             }
         ],
         "ubicacion": {
-            "direccion": "Calle Plateros 326, Cusco 08000, Perú",
-            "horario": "Abierto ahora • Cierra 10:00 PM",
+            "direccion": "17 Rue Antaninarenina, Antananarivo 101, Madagascar",
+            "horario": "Abierto ahora • Cierra 10:30 PM",
             "mapa_img": "https://images.unsplash.com/photo-1526772662000-3f88f10405ff?w=400"
         },
         "platos_destacados": [
             {
-                "nombre": "Cuy Chactado",
-                "desc": "Tradicional cuy frito acompañado de papas doradas y maíz.",
+                "nombre": "Filete de Cebú",
+                "desc": "Solomillo de cebú local con salsa de pimienta verde de Madagascar.",
                 "img": "https://images.unsplash.com/photo-1544025162-d76694265947?w=200"
             },
             {
-                "nombre": "Lomo Saltado",
-                "desc": "Jugosos trozos de lomo fino salteados con vegetales.",
+                "nombre": "Magret de Canard",
+                "desc": "Pato tierno con reducción de frutas tropicales locales.",
                 "img": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=200"
             }
         ],
         "opiniones": [
             {
-                "usuario": "Sofia M.",
-                "avatar": "https://i.pravatar.cc/100?u=1",
-                "fecha": "Hace 2 días",
+                "usuario": "Jean L.",
+                "avatar": "https://i.pravatar.cc/100?u=10",
+                "fecha": "Hace 1 día",
                 "puntuacion": 5,
-                "comentario": "La comida es espectacular, especialmente el lomo saltado de alpaca. El ambiente es muy acogedor y el servicio de primera."
+                "comentario": "Una experiencia gastronómica de clase mundial en el corazón de Tana."
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "nombre": "L'Heure Bleue",
+        "categoria": "Mariscos y Cocina Tropical",
+        "precio": "$$$",
+        "puntuacion": 4.7,
+        "resenas_conteo": 185,
+        "ciudad": "Nosy Be",
+        "pais": "Madagascar",
+        "descripcion": [
+            "Ubicado frente al mar, este restaurante captura la esencia de la isla con mariscos frescos capturados diariamente por pescadores locales.",
+            "Ambiente relajado pero elegante, ideal para disfrutar del atardecer con un cóctel de ron artesanal."
+        ],
+        "imagenes": [
+            "https://images.unsplash.com/photo-1552566626-52f8b828add9?w=1600",
+            "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1600"
+        ],
+        "servicios": [
+            {
+                "icon": "pool",
+                "label": "Vista al Mar"
             },
             {
-                "usuario": "Carlos R.",
-                "avatar": "https://i.pravatar.cc/100?u=2",
+                "icon": "wifi",
+                "label": "Wi-Fi Gratis"
+            },
+            {
+                "icon": "liquor",
+                "label": "Bar de Rones"
+            }
+        ],
+        "ubicacion": {
+            "direccion": "Madirokely Beach, Nosy Be 207, Madagascar",
+            "horario": "Abierto ahora • Cierra 11:00 PM",
+            "mapa_img": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400"
+        },
+        "platos_destacados": [
+            {
+                "nombre": "Langosta a la Parrilla",
+                "desc": "Langosta fresca servida con mantequilla de vainilla de Madagascar.",
+                "img": "https://images.unsplash.com/photo-1553243772-0a9121c95563?w=200"
+            }
+        ],
+        "opiniones": [
+            {
+                "usuario": "Marie S.",
+                "avatar": "https://i.pravatar.cc/100?u=11",
+                "fecha": "Hace 3 días",
+                "puntuacion": 5,
+                "comentario": "La langosta más fresca que he probado en mi vida. El ambiente es mágico."
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "nombre": "Valahara Antsirabe",
+        "categoria": "Tradicional y Fusión",
+        "precio": "$$",
+        "puntuacion": 4.6,
+        "resenas_conteo": 150,
+        "ciudad": "Antsirabe",
+        "pais": "Madagascar",
+        "descripcion": [
+            "Valahara es un refugio acogedor en la ciudad de las aguas térmicas. Se especializa en reinterpretar platos tradicionales malgaches.",
+            "Famoso por su uso de productos agrícolas frescos de las tierras altas y su hospitalidad excepcional."
+        ],
+        "imagenes": [
+            "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1600"
+        ],
+        "servicios": [
+            {
+                "icon": "fireplace",
+                "label": "Chimenea"
+            },
+            {
+                "icon": "family_restroom",
+                "label": "Ambiente Familiar"
+            },
+            {
+                "icon": "coffee",
+                "label": "Café de Especialidad"
+            }
+        ],
+        "ubicacion": {
+            "direccion": "Avenida de la Independencia, Antsirabe 110, Madagascar",
+            "horario": "Cierra pronto • 09:00 PM",
+            "mapa_img": "https://images.unsplash.com/photo-1526772662000-3f88f10405ff?w=400"
+        },
+        "platos_destacados": [
+            {
+                "nombre": "Romazava",
+                "desc": "Caldo tradicional de carne con hojas verdes (brèdes) y jengibre.",
+                "img": "https://images.unsplash.com/photo-1547592166-23ac45744acd?w=200"
+            }
+        ],
+        "opiniones": [
+            {
+                "usuario": "Roberto G.",
+                "avatar": "https://i.pravatar.cc/100?u=12",
                 "fecha": "Hace 1 semana",
                 "puntuacion": 4,
-                "comentario": "Excelente lugar para cenar en Cusco. Los ingredientes se sienten muy frescos. El Cuy Chactado es crujiente y delicioso."
+                "comentario": "Excelente comida casera malgache en un lugar muy tranquilo."
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "nombre": "Su e Giu",
+        "categoria": "Italiana y Mediterránea",
+        "precio": "$$$",
+        "puntuacion": 4.5,
+        "resenas_conteo": 210,
+        "ciudad": "Antananarivo",
+        "pais": "Madagascar",
+        "descripcion": [
+            "Un rincón de Italia en Madagascar. Su e Giu es conocido por sus pastas artesanales y pizzas al horno de leña.",
+            "Utilizan quesos locales y tomates frescos de la isla para crear sabores auténticos del Mediterráneo."
+        ],
+        "imagenes": [
+            "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1600"
+        ],
+        "servicios": [
+            {
+                "icon": "local_pizza",
+                "label": "Horno de Leña"
             },
             {
-                "usuario": "Elena Valdés",
-                "avatar": "https://i.pravatar.cc/100?u=3",
+                "icon": "wifi",
+                "label": "Wi-Fi Gratis"
+            },
+            {
+                "icon": "delivery_dining",
+                "label": "Para llevar"
+            }
+        ],
+        "ubicacion": {
+            "direccion": "Rue de la Laliere, Antananarivo, Madagascar",
+            "horario": "Abierto ahora • Cierra 10:00 PM",
+            "mapa_img": "https://images.unsplash.com/photo-1526772662000-3f88f10405ff?w=400"
+        },
+        "platos_destacados": [
+            {
+                "nombre": "Linguine con Camarones",
+                "desc": "Pasta fresca con camarones gigantes de Morondava.",
+                "img": "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=200"
+            }
+        ],
+        "opiniones": [
+            {
+                "usuario": "Lucía P.",
+                "avatar": "https://i.pravatar.cc/100?u=13",
                 "fecha": "Hace 2 semanas",
                 "puntuacion": 5,
-                "comentario": "Increíble la decoración y la música en vivo le da un toque mágico. Definitivamente volveré en mi próximo viaje."
+                "comentario": "Las mejores pizzas de la ciudad, definitivamente."
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "nombre": "La Plantation",
+        "categoria": "Fusión Gourmet",
+        "precio": "$$$",
+        "puntuacion": 4.8,
+        "resenas_conteo": 140,
+        "ciudad": "Toamasina",
+        "pais": "Madagascar",
+        "descripcion": [
+            "Ubicado en la ciudad portuaria de Toamasina, este restaurante destaca por su uso creativo de las especias: pimienta, clavo y canela.",
+            "El ambiente es colonial con un jardín exuberante que te transporta a otra época."
+        ],
+        "imagenes": [
+            "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1600"
+        ],
+        "servicios": [
+            {
+                "icon": "park",
+                "label": "Jardín Tropical"
+            },
+            {
+                "icon": "payments",
+                "label": "Acepta Tarjetas"
+            },
+            {
+                "icon": "celebration",
+                "label": "Eventos"
+            }
+        ],
+        "ubicacion": {
+            "direccion": "Boulevard Joffre, Toamasina 501, Madagascar",
+            "horario": "Abierto ahora • Cierra 10:00 PM",
+            "mapa_img": "https://images.unsplash.com/photo-1526772662000-3f88f10405ff?w=400"
+        },
+        "platos_destacados": [
+            {
+                "nombre": "Pescado al Coco",
+                "desc": "Captura del día cocinada en leche de coco fresca y cúrcuma.",
+                "img": "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?w=200"
+            }
+        ],
+        "opiniones": [
+            {
+                "usuario": "Andry T.",
+                "avatar": "https://i.pravatar.cc/100?u=14",
+                "fecha": "Hace 4 días",
+                "puntuacion": 5,
+                "comentario": "El curry de pescado es sublime. Muy recomendado si visitas la costa este."
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "nombre": "L'Orion",
+        "categoria": "Especialidades Malgaches",
+        "precio": "$$",
+        "puntuacion": 4.4,
+        "resenas_conteo": 95,
+        "ciudad": "Antananarivo",
+        "pais": "Madagascar",
+        "descripcion": [
+            "Un lugar auténtico frecuentado por locales y viajeros que buscan el sabor real de Madagascar.",
+            "Especialistas en Ravitoto y otras delicias que utilizan el arroz como base fundamental de cada comida."
+        ],
+        "imagenes": [
+            "https://images.unsplash.com/photo-1559339352-11d035aa65de?w=1600"
+        ],
+        "servicios": [
+            {
+                "icon": "music_note",
+                "label": "Música Local"
+            },
+            {
+                "icon": "groups",
+                "label": "Ideal para Grupos"
+            },
+            {
+                "icon": "takeout_dining",
+                "label": "Comida para llevar"
+            }
+        ],
+        "ubicacion": {
+            "direccion": "Quartier Isoraka, Antananarivo, Madagascar",
+            "horario": "Abierto ahora • Cierra 09:30 PM",
+            "mapa_img": "https://images.unsplash.com/photo-1526772662000-3f88f10405ff?w=400"
+        },
+        "platos_destacados": [
+            {
+                "nombre": "Ravitoto sy Henakisoa",
+                "desc": "Hojas de mandioca trituradas con trozos de carne de cerdo grasa.",
+                "img": "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?w=200"
+            }
+        ],
+        "opiniones": [
+            {
+                "usuario": "Faly R.",
+                "avatar": "https://i.pravatar.cc/100?u=15",
+                "fecha": "Hace 1 semana",
+                "puntuacion": 4,
+                "comentario": "El mejor Ravitoto de la ciudad. Porciones generosas y buen precio."
             }
         ]
     }
