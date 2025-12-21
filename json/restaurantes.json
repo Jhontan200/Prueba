@@ -1,0 +1,66 @@
+[
+    {
+        "id": 1,
+        "nombre": "El Fogón de los Andes",
+        "categoria": "Comida Típica Andina",
+        "precio": "$$$",
+        "puntuacion": 4.8,
+        "resenas_conteo": 240,
+        "ciudad": "Cusco",
+        "pais": "Perú",
+        "descripcion": [
+            "Disfruta de una experiencia culinaria única con los mejores sabores de la sierra peruana. Nuestro restaurante 'El Fogón de los Andes' ofrece ingredientes orgánicos cultivados localmente.",
+            "Ubicado en una casona colonial restaurada, el ambiente combina lo rústico con lo elegante. Nuestra especialidad es el Cuy Chactado y el Lomo Saltado de Alpaca."
+        ],
+        "imagenes": [
+            "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1600",
+            "https://images.unsplash.com/photo-1552566626-52f8b828add9?w=1600",
+            "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1600",
+            "https://images.unsplash.com/photo-1559339352-11d035aa65de?w=1600",
+            "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1600"
+        ],
+        "servicios": [
+            {
+                "icon": "wifi",
+                "label": "Wi-Fi Gratis"
+            },
+            {
+                "icon": "deck",
+                "label": "Terraza"
+            },
+            {
+                "icon": "local_parking",
+                "label": "Estacionamiento"
+            },
+            {
+                "icon": "wine_bar",
+                "label": "Bar Completo"
+            },
+            {
+                "icon": "payments",
+                "label": "Acepta Tarjetas"
+            },
+            {
+                "icon": "music_note",
+                "label": "Música en Vivo"
+            }
+        ],
+        "ubicacion": {
+            "direccion": "Calle Plateros 326, Cusco 08000, Perú",
+            "horario": "Abierto ahora • Cierra 10:00 PM",
+            "mapa_img": "https://images.unsplash.com/photo-1526772662000-3f88f10405ff?w=400"
+        },
+        "platos_destacados": [
+            {
+                "nombre": "Cuy Chactado",
+                "desc": "Tradicional cuy frito acompañado de papas doradas y maíz.",
+                "img": "https://images.unsplash.com/photo-1544025162-d76694265947?w=200"
+            },
+            {
+                "nombre": "Lomo Saltado",
+                "desc": "Jugosos trozos de lomo fino salteados con vegetales.",
+                "img": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=200"
+            }
+        ]
+    }
+]
