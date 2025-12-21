@@ -13,11 +13,12 @@
             "Ubicado en una casona histórica decorada con antigüedades. Su especialidad es el filete de cebú y el foie gras artesanal."
         ],
         "imagenes": [
-            "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=1600",
-            "https://images.unsplash.com/photo-1550966842-28c2e2eb0b51?w=1600",
-            "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1600",
-            "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1600",
-            "https://images.unsplash.com/photo-1559339352-11d035aa65de?w=1600"
+            "https://raw.githubusercontent.com/Jhontan200/Prueba/main/imagenes/la-varangue.jpg",
+            "https://raw.githubusercontent.com/Jhontan200/Prueba/main/imagenes/restaurante_1_1.jpg",
+            "https://raw.githubusercontent.com/Jhontan200/Prueba/main/imagenes/restaurante_1_2.jpg",
+            "https://raw.githubusercontent.com/Jhontan200/Prueba/main/imagenes/restaurante_1_3.jpg",
+            "https://raw.githubusercontent.com/Jhontan200/Prueba/main/imagenes/restaurante_1_4.jpg",
+            "https://raw.githubusercontent.com/Jhontan200/Prueba/main/imagenes/restaurante_1_5.jpg"
         ],
         "servicios": [
             {
@@ -58,12 +59,12 @@
             {
                 "nombre": "Filete de Cebú a la Pimienta",
                 "desc": "Carne tierna de cebú local con pimienta verde de Madagascar.",
-                "img": "https://images.unsplash.com/photo-1544025162-d76694265947?w=200"
+                "img": "https://raw.githubusercontent.com/Jhontan200/Prueba/main/imagenes/restaurante_1_plato1.jpg"
             },
             {
                 "nombre": "Magret de Canard",
                 "desc": "Pato con reducción de vainilla y frutas tropicales.",
-                "img": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=200"
+                "img": "https://raw.githubusercontent.com/Jhontan200/Prueba/main/imagenes/restaurante_1_plato2.jpg"
             }
         ],
         "opiniones": [
@@ -90,11 +91,10 @@
             "Ambiente 'chic descalzo'. Disfruta de la brisa marina mientras pruebas nuestra famosa langosta a la parrilla."
         ],
         "imagenes": [
-            "https://images.unsplash.com/photo-1552566626-52f8b828add9?w=1600",
-            "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1600",
-            "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1600",
-            "https://images.unsplash.com/photo-1559339352-11d035aa65de?w=1600",
-            "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1600"
+            "https://raw.githubusercontent.com/Jhontan200/Prueba/main/imagenes/LHeure_Bleue.jpg",
+            "https://raw.githubusercontent.com/Jhontan200/Prueba/main/imagenes/restaurante_2_1.jpg",
+            "https://raw.githubusercontent.com/Jhontan200/Prueba/main/imagenes/restaurante_2_2.jpg",
+            "https://raw.githubusercontent.com/Jhontan200/Prueba/main/imagenes/restaurante_2_3.jpg"
         ],
         "servicios": [
             {
@@ -112,10 +112,6 @@
             {
                 "icon": "payments",
                 "label": "Acepta Tarjetas"
-            },
-            {
-                "icon": "beach_access",
-                "label": "Acceso Playa"
             }
         ],
         "ubicacion": {
@@ -135,7 +131,7 @@
             {
                 "nombre": "Langosta a la Vainilla",
                 "desc": "Langosta fresca bañada en mantequilla infusionada con vainilla de Sambava.",
-                "img": "https://images.unsplash.com/photo-1553243772-0a9121c95563?w=200"
+                "img": "https://raw.githubusercontent.com/Jhontan200/Prueba/main/imagenes/restaurante_2_plato1.jpg"
             }
         ],
         "opiniones": [
@@ -160,11 +156,11 @@
             "Decoración rústica con materiales naturales. No dejes de probar el Romazava, el plato nacional de Madagascar."
         ],
         "imagenes": [
-            "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1600",
-            "https://images.unsplash.com/photo-1552566626-52f8b828add9?w=1600",
-            "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1600",
-            "https://images.unsplash.com/photo-1559339352-11d035aa65de?w=1600",
-            "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1600"
+            "https://raw.githubusercontent.com/Jhontan200/Prueba/main/imagenes/Valahara_Antsirabe.jpg",
+            "https://raw.githubusercontent.com/Jhontan200/Prueba/main/imagenes/restaurante_3_1.jpg",
+            "https://raw.githubusercontent.com/Jhontan200/Prueba/main/imagenes/restaurante_3_2.jpg",
+            "https://raw.githubusercontent.com/Jhontan200/Prueba/main/imagenes/restaurante_3_3.jpg",
+            "https://raw.githubusercontent.com/Jhontan200/Prueba/main/imagenes/restaurante_3_4.jpg"
         ],
         "servicios": [
             {
@@ -201,7 +197,7 @@
             {
                 "nombre": "Romazava de Cebú",
                 "desc": "Caldo de hojas verdes picantes (brèdes) con carne de cebú.",
-                "img": "https://images.unsplash.com/photo-1547592166-23ac45744acd?w=200"
+                "img": "https://raw.githubusercontent.com/Jhontan200/Prueba/main/imagenes/restaurante_3_plato1.jpg"
             }
         ],
         "opiniones": [
@@ -226,11 +222,13 @@
             "Famoso por sus pastas artesanales hechas a mano diariamente y su terraza con vistas a la ciudad."
         ],
         "imagenes": [
-            "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1600",
-            "https://images.unsplash.com/photo-1552566626-52f8b828add9?w=1600",
-            "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1600",
-            "https://images.unsplash.com/photo-1559339352-11d035aa65de?w=1600",
-            "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1600"
+            "https://raw.githubusercontent.com/Jhontan200/Prueba/main/imagenes/Su_e_Giu.jpg",
+            "https://raw.githubusercontent.com/Jhontan200/Prueba/main/imagenes/restaurante_4_1.jpg",
+            "https://raw.githubusercontent.com/Jhontan200/Prueba/main/imagenes/restaurante_4_2.jpg",
+            "https://raw.githubusercontent.com/Jhontan200/Prueba/main/imagenes/restaurante_4_3.jpg",
+            "https://raw.githubusercontent.com/Jhontan200/Prueba/main/imagenes/restaurante_4_4.jpg",
+            "https://raw.githubusercontent.com/Jhontan200/Prueba/main/imagenes/restaurante_4_5.jpg",
+            "https://raw.githubusercontent.com/Jhontan200/Prueba/main/imagenes/restaurante_4_6.jpg"
         ],
         "servicios": [
             {
@@ -267,7 +265,7 @@
             {
                 "nombre": "Pasta con Gambas",
                 "desc": "Linguine con gambas gigantes de Madagascar y aceite de oliva.",
-                "img": "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=200"
+                "img": "https://raw.githubusercontent.com/Jhontan200/Prueba/main/imagenes/restaurante_4_plato1.jpg"
             }
         ],
         "opiniones": [
@@ -292,11 +290,12 @@
             "Ambiente colonial con un jardín tropical donde se puede degustar el pescado del día con salsas exóticas."
         ],
         "imagenes": [
-            "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1600",
-            "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1600",
-            "https://images.unsplash.com/photo-1552566626-52f8b828add9?w=1600",
-            "https://images.unsplash.com/photo-1559339352-11d035aa65de?w=1600",
-            "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1600"
+            "https://raw.githubusercontent.com/Jhontan200/Prueba/main/imagenes/la_plantation.jpg",
+            "https://raw.githubusercontent.com/Jhontan200/Prueba/main/imagenes/restaurante_5_1.jpg",
+            "https://raw.githubusercontent.com/Jhontan200/Prueba/main/imagenes/restaurante_5_2.jpg",
+            "https://raw.githubusercontent.com/Jhontan200/Prueba/main/imagenes/restaurante_5_3.jpg",
+            "https://raw.githubusercontent.com/Jhontan200/Prueba/main/imagenes/restaurante_5_4.jpg",
+            "https://raw.githubusercontent.com/Jhontan200/Prueba/main/imagenes/restaurante_5_5.jpg"
         ],
         "servicios": [
             {
@@ -333,7 +332,7 @@
             {
                 "nombre": "Pescado al Coco",
                 "desc": "Filete de pescado blanco con leche de coco fresca y cúrcuma.",
-                "img": "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?w=200"
+                "img": "https://raw.githubusercontent.com/Jhontan200/Prueba/main/imagenes/restaurante_5_plato1.jpg"
             }
         ],
         "opiniones": [
@@ -358,11 +357,13 @@
             "Especialistas en Ravitoto sy Henakisoa y parrilladas de carne de cebú."
         ],
         "imagenes": [
-            "https://images.unsplash.com/photo-1559339352-11d035aa65de?w=1600",
-            "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1600",
-            "https://images.unsplash.com/photo-1552566626-52f8b828add9?w=1600",
-            "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1600",
-            "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1600"
+            "https://raw.githubusercontent.com/Jhontan200/Prueba/main/imagenes/Lorion.jpg",
+            "https://raw.githubusercontent.com/Jhontan200/Prueba/main/imagenes/restaurante_6_1.jpg",
+            "https://raw.githubusercontent.com/Jhontan200/Prueba/main/imagenes/restaurante_6_2.jpg",
+            "https://raw.githubusercontent.com/Jhontan200/Prueba/main/imagenes/restaurante_6_3.jpg",
+            "https://raw.githubusercontent.com/Jhontan200/Prueba/main/imagenes/restaurante_6_4.jpg",
+            "https://raw.githubusercontent.com/Jhontan200/Prueba/main/imagenes/restaurante_6_5.jpg",
+            "https://raw.githubusercontent.com/Jhontan200/Prueba/main/imagenes/restaurante_6_6.jpg"
         ],
         "servicios": [
             {
@@ -399,7 +400,7 @@
             {
                 "nombre": "Ravitoto Tradicional",
                 "desc": "Hojas de mandioca trituradas con carne de cerdo y arroz blanco.",
-                "img": "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?w=200"
+                "img": "https://raw.githubusercontent.com/Jhontan200/Prueba/main/imagenes/restaurante_6_plato1.jpg"
             }
         ],
         "opiniones": [
