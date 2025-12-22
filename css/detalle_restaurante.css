@@ -1,4 +1,130 @@
-/* Ocultar barra de scroll pero mantener funcionalidad */
+/* ==========================================================================
+   1. ESTRUCTURA Y GRID
+   ========================================================================== */
+.grid-detalle {
+    display: grid;
+    grid-template-areas: "info" "sidebar" "reviews";
+    gap: 2.5rem;
+}
+
+@media (min-width: 1024px) {
+    .grid-detalle {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas:
+            "info info sidebar"
+            "reviews reviews sidebar";
+    }
+}
+
+#area-info {
+    grid-area: info;
+}
+
+#area-sidebar {
+    grid-area: sidebar;
+}
+
+#area-reviews {
+    grid-area: reviews;
+}
+
+/* ==========================================================================
+   2. CURSORES Y ESTRELLAS (Solución al símbolo +)
+   ========================================================================== */
+#star-rating {
+    cursor: pointer !important;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+#star-rating span {
+    cursor: pointer !important;
+    display: inline-block;
+    user-select: none;
+}
+
+/* Ocultar flechas del input number */
+#rev-rating::-webkit-inner-spin-button,
+#rev-rating::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+#rev-rating {
+    -moz-appearance: textfield;
+}
+
+/* ==========================================================================
+   3. GALERÍA CON ZOOM PROFESIONAL
+   ========================================================================== */
+.gallery-main-container {
+    overflow: hidden;
+    cursor: zoom-in !important;
+    position: relative;
+    border-radius: 12px;
+    user-select: none;
+    background: #000;
+}
+
+.gallery-main-container.zoomed {
+    cursor: zoom-out !important;
+}
+
+#main-gallery-img {
+    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transform-origin: center center;
+    pointer-events: none;
+    /* Importante: deja que el contenedor maneje el cursor */
+    display: block;
+    width: 100%;
+}
+
+.zoomed #main-gallery-img {
+    transform: scale(2.2);
+}
+
+/* ==========================================================================
+   4. ANIMACIONES Y SKELETON
+   ========================================================================== */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fadeInUp {
+    animation: fadeInUp 0.4s ease forwards;
+}
+
+.skeleton {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: skeleton-loading 1.5s infinite;
+}
+
+@keyframes skeleton-loading {
+    0% {
+        background-position: 200% 0;
+    }
+
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+.dark .skeleton {
+    background: linear-gradient(90deg, #2a2a2a 25%, #3f3f3f 50%, #2a2a2a 75%);
+}
+
+/* ==========================================================================
+   5. UTILIDADES
+   ========================================================================== */
 .no-scrollbar::-webkit-scrollbar {
     display: none;
 }
@@ -6,4 +132,22 @@
 .no-scrollbar {
     -ms-overflow-style: none;
     scrollbar-width: none;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+#share-modal .animate-fadeInUp {
+    animation: fadeInUp 0.3s ease-out;
+}
+
+/* Evita que el input de la URL sea editable visualmente pero que permita copiar */
+#share-url-input {
+    user-select: all;
 }

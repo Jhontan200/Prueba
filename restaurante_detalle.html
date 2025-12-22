@@ -2,31 +2,32 @@
 <html class="light" lang="es">
 
 <head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <title>Cargando... - Maki Catta</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="https://fonts.googleapis.com" rel="preconnect" />
-    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
 
     <link
         href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Dosis:wght@200..800&family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
 
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
-        rel="stylesheet" />
+        rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
     <link rel="stylesheet" href="css/detalle_restaurante.css">
+    <link rel="stylesheet" href="css/header.css">
 </head>
 
 <body
     class="bg-background-light dark:bg-background-dark text-gray-800 dark:text-gray-200 font-body transition-colors duration-300">
 
-    <header id="main-header" class="fixed w-full z-[120] transition-all duration-300 bg-transparent py-4 font-button">
+    <header id="main-header" class="fixed w-full z-50 transition-all duration-300 bg-transparent py-4 font-button">
         <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16 items-center">
                 <div class="flex-shrink-0">
-                    <a href="index.html">
+                    <a href="#">
                         <img id="logo-light" src="imagenes/logo_blanco.webp" alt="Logo" width="160" height="64"
                             fetchpriority="high" class="h-16 w-auto object-contain">
                         <img id="logo-dark" src="imagenes/logo.webp" alt="Logo" width="160" height="64"
@@ -34,14 +35,23 @@
                     </a>
                 </div>
 
-                <div class="hidden md:flex space-x-8 items-center">
-                    <a class="nav-link text-white hover:text-accent font-medium transition" href="index.html">Inicio</a>
+                <div class="hidden md:flex space-x-6 items-center">
+                    <a class="nav-link text-white hover:text-accent font-medium transition" href="#">Inicio</a>
                     <a class="nav-link text-white/90 hover:text-accent font-medium transition"
                         href="#destinos">Destinos</a>
                     <a class="nav-link text-white/90 hover:text-accent font-medium transition"
                         href="#hoteles">Hoteles</a>
                     <a class="nav-link text-white/90 hover:text-accent font-medium transition"
                         href="restaurantes.html">Restaurantes</a>
+                    <a class="nav-link text-white/90 hover:text-accent font-medium transition"
+                        href="restaurantes.html">Sobre Nosotros</a>
+
+                    <button id="theme-toggle"
+                        class="p-2 rounded-full text-white/90 hover:bg-white/10 transition-colors focus:outline-none"
+                        aria-label="Cambiar tema">
+                        <span id="theme-icon" class="material-symbols-outlined">light_mode</span>
+                    </button>
+
                     <a id="contact-btn"
                         class="px-5 py-2 rounded-full bg-white text-primary hover:bg-accent transition font-bold text-sm shadow-sm"
                         href="#contacto">
@@ -49,7 +59,10 @@
                     </a>
                 </div>
 
-                <div class="md:hidden">
+                <div class="md:hidden flex items-center gap-4">
+                    <button id="theme-toggle-mobile" class="p-2 rounded-full text-white/90 transition-colors">
+                        <span class="theme-icon-mobile material-symbols-outlined">light_mode</span>
+                    </button>
                     <button id="mobile-menu-button"
                         class="text-white focus:outline-none transition-transform active:scale-90" aria-label="Menu">
                         <span id="menu-icon" class="material-icons-outlined text-4xl">menu</span>
@@ -59,15 +72,16 @@
         </nav>
 
         <div id="mobile-menu"
-            class="hidden absolute top-0 left-0 w-full h-screen bg-white dark:bg-card-dark z-[-1] flex-col items-center justify-center gap-6 p-8 transition-all duration-300">
-            <a class="mobile-nav-link text-primary dark:text-white text-3xl font-display font-bold"
-                href="index.html">Inicio</a>
+            class="hidden absolute top-0 left-0 w-full h-screen bg-card-light/95 dark:bg-card-dark/95 backdrop-blur-xl z-[-1] flex-col items-center justify-center gap-6 p-8 transition-all duration-300 border-b border-primary/10">
+            <a class="mobile-nav-link text-primary dark:text-white text-3xl font-display font-bold" href="#">Inicio</a>
             <a class="mobile-nav-link text-primary dark:text-white text-3xl font-display font-bold"
                 href="#destinos">Destinos</a>
             <a class="mobile-nav-link text-primary dark:text-white text-3xl font-display font-bold"
                 href="#hoteles">Hoteles</a>
             <a class="mobile-nav-link text-primary dark:text-white text-3xl font-display font-bold"
                 href="restaurantes.html">Restaurantes</a>
+            <a class="mobile-nav-link text-primary dark:text-white text-3xl font-display font-bold"
+                href="restaurantes.html">Sobre Nosotros</a>
             <a class="mt-4 px-10 py-4 rounded-full bg-primary text-white font-button font-bold text-xl shadow-xl active:scale-95 transition-transform"
                 href="#contacto">
                 Contáctenos
@@ -75,12 +89,13 @@
         </div>
     </header>
 
-    <div class="relative w-full h-[650px] lg:h-[85vh] min-h-[600px] bg-primary group overflow-hidden">
-        <input checked class="hidden peer/s1" id="slide1" name="hero-slider" type="radio" />
-        <input class="hidden peer/s2" id="slide2" name="hero-slider" type="radio" />
-        <input class="hidden peer/s3" id="slide3" name="hero-slider" type="radio" />
-        <input class="hidden peer/s4" id="slide4" name="hero-slider" type="radio" />
-        <input class="hidden peer/s5" id="slide5" name="hero-slider" type="radio" />
+    <section class="relative w-full h-[650px] lg:h-[85vh] min-h-[600px] bg-primary group overflow-hidden">
+        <h2 class="sr-only">Galería de imágenes principal</h2>
+        <input checked class="hidden peer/s1" id="slide1" name="hero-slider" type="radio">
+        <input class="hidden peer/s2" id="slide2" name="hero-slider" type="radio">
+        <input class="hidden peer/s3" id="slide3" name="hero-slider" type="radio">
+        <input class="hidden peer/s4" id="slide4" name="hero-slider" type="radio">
+        <input class="hidden peer/s5" id="slide5" name="hero-slider" type="radio">
 
         <div
             class="absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out opacity-0 peer-checked/s1:opacity-100 z-0">
@@ -149,11 +164,11 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
     <div class="w-full bg-card-light dark:bg-card-dark border-b border-secondary/20 shadow-sm font-button">
         <div class="max-w-7xl mx-auto px-4 lg:px-10 py-4 flex gap-4 items-center overflow-x-auto">
-            <button
+            <button id="btn-abrir-compartir"
                 class="flex items-center gap-2 px-6 py-2.5 rounded-lg border border-secondary text-primary dark:text-accent font-bold hover:bg-accent/20 transition-all whitespace-nowrap">
                 <span class="material-symbols-outlined text-[20px]">share</span> Compartir
             </button>
@@ -164,139 +179,134 @@
         </div>
     </div>
 
-    <main
-        class="flex-grow w-full max-w-7xl mx-auto px-4 md:px-10 py-12 pb-20 flex flex-col lg:grid lg:grid-cols-3 gap-10 items-start">
+    <main class="w-full max-w-7xl mx-auto px-4 md:px-10 py-12 pb-20 grid-detalle">
 
-        <div class="lg:col-span-2 flex flex-col gap-10 w-full contents lg:flex">
-
-            <div
-                class="bg-card-light dark:bg-card-dark rounded-xl p-6 md:p-8 shadow-sm border border-secondary/10 order-1">
+        <div id="area-info" class="flex flex-col gap-10">
+            <section class="bg-card-light dark:bg-card-dark rounded-xl p-6 md:p-8 shadow-sm border border-secondary/10">
                 <h3 class="text-2xl font-display font-bold text-primary dark:text-accent mb-4">Sobre el Restaurante</h3>
                 <div class="prose max-w-none text-base leading-relaxed text-primary/80 dark:text-white/80 font-body">
                 </div>
-
                 <div class="mt-8 pt-8 border-t border-secondary/20">
                     <h4 class="text-lg font-display font-bold mb-4 text-primary dark:text-accent">Servicios y Amenidades
                     </h4>
                     <div id="services-grid" class="grid grid-cols-2 md:grid-cols-3 gap-y-4 gap-x-8 font-body"></div>
                 </div>
-            </div>
+            </section>
+        </div>
 
+        <aside id="area-sidebar" class="w-full lg:sticky lg:top-24 flex flex-col gap-6">
             <div
-                class="bg-card-light dark:bg-card-dark rounded-xl p-6 md:p-8 shadow-sm border border-secondary/10 order-3">
+                class="bg-card-light dark:bg-card-dark rounded-xl shadow-lg border border-secondary/10 overflow-hidden">
+                <div class="w-full min-h-[160px]" id="location"></div>
+                <div class="p-6 flex flex-col gap-4 font-body">
+                    <p id="dir-text" class="text-sm text-primary/70 dark:text-white/70"></p>
+                    <div id="horario-text" class="text-sm text-primary/70 dark:text-white/70"></div>
+                </div>
+            </div>
+            <div class="bg-card-light dark:bg-card-dark rounded-xl shadow-lg border border-secondary/20 p-6">
+                <h3 class="font-display font-bold text-primary dark:text-accent mb-4">Platos Destacados</h3>
+                <div id="platos-container" class="flex flex-col gap-3 font-body"></div>
+            </div>
+        </aside>
+
+        <div id="area-reviews" class="flex flex-col gap-10">
+            <section class="bg-card-light dark:bg-card-dark rounded-xl p-6 md:p-8 shadow-sm border border-secondary/10">
                 <div class="flex items-center justify-between mb-6">
                     <h3 class="text-2xl font-display font-bold text-primary dark:text-accent">
                         Opiniones (<span id="reviews-count">0</span>)
                     </h3>
-                    <a class="text-secondary font-button font-medium hover:underline decoration-accent text-sm"
-                        href="#">Ver todas</a>
                 </div>
-
-                <div id="reviews-container" class="flex flex-col gap-4">
+                <div id="reviews-container" class="w-full flex flex-col gap-0">
                 </div>
-
-                <button
+                <button id="open-review-form"
                     class="w-full mt-6 py-4 border-2 border-dashed border-secondary/30 rounded-lg text-secondary font-bold hover:bg-secondary/5 transition-colors text-xs uppercase tracking-widest">
                     Escribir una opinión
                 </button>
-            </div>
+            </section>
         </div>
 
-        <div class="lg:col-span-1 order-2 w-full lg:sticky lg:top-24">
-            <div class="flex flex-col gap-6">
-                <div
-                    class="bg-card-light dark:bg-card-dark rounded-xl shadow-lg border border-secondary/10 overflow-hidden">
-                    <div class="w-full h-auto min-h-[160px] bg-accent/30 relative group cursor-pointer overflow-hidden"
-                        id="location">
-                        <div id="location-img"
-                            class="w-full h-full bg-center bg-cover opacity-80 group-hover:opacity-100 transition-opacity">
-                        </div>
-                        <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
-                            <div
-                                class="bg-primary text-white p-2 rounded-full shadow-lg transform -translate-y-2 group-hover:-translate-y-3 transition-transform">
-                                <span class="material-symbols-outlined">location_on</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="p-6 flex flex-col gap-4 font-body">
-                        <div class="flex items-start gap-3">
-                            <span class="material-symbols-outlined text-secondary mt-0.5">location_on</span>
-                            <div>
-                                <p class="font-bold text-sm text-primary dark:text-accent">Dirección</p>
-                                <p id="dir-text" class="text-sm text-primary/70 dark:text-white/70"></p>
-                            </div>
-                        </div>
-                        <div class="flex items-start gap-3">
-                            <span class="material-symbols-outlined text-secondary mt-0.5">schedule</span>
-                            <div>
-                                <p class="font-bold text-sm text-primary dark:text-accent">Horario</p>
-                                <div id="horario-text" class="text-sm text-primary/70 dark:text-white/70"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div
-                    class="bg-card-light dark:bg-card-dark rounded-xl shadow-lg border border-secondary/20 p-6 group/card">
-                    <h3 class="font-display font-bold text-primary dark:text-accent mb-4 flex items-center gap-2">
-                        <span class="material-symbols-outlined text-[22px]">restaurant_menu</span>Platos Destacados
-                    </h3>
-                    <div id="platos-container" class="flex flex-col gap-3 font-body"></div>
-                </div>
-            </div>
-        </div>
     </main>
 
     <footer class="bg-footer-custom text-gray-400 py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-4 gap-8 mb-8 text-center md:text-left">
-                <div class="col-span-1 md:col-span-2">
-                    <div class="flex justify-center md:justify-start items-center gap-2 mb-4">
-                        <img src="imagenes/logo_footer.webp" alt="Logo" width="120" height="48"
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-12 mb-12 text-center md:text-left">
+
+                <div class="md:col-span-5 flex flex-col items-center md:items-start">
+                    <div class="mb-6">
+                        <img src="imagenes/logo_footer.webp" alt="Logo Footer" width="120" height="48"
                             class="h-12 w-auto object-contain" loading="lazy">
                     </div>
-                    <p class="text-sm font-body max-w-xs mx-auto md:mx-0">Explorando el mundo, un destino a la vez. Tu
-                        socio de confianza para viajes inolvidables.</p>
+                    <p class="text-sm font-body max-w-sm text-white/90">
+                        Explorando el mundo, un destino a la vez. Tu socio de confianza para viajes inolvidables.
+                    </p>
                 </div>
-                <div class="font-button">
-                    <h4 class="text-white font-bold mb-4 uppercase text-xs tracking-wider">Enlaces</h4>
-                    <ul class="space-y-2 text-sm">
-                        <li><a class="hover:text-white transition" href="#">Inicio</a></li>
-                        <li><a class="hover:text-white transition" href="#destinos">Destinos</a></li>
-                        <li><a class="hover:text-white transition" href="#destinos">Hoteles</a></li>
-                        <li><a class="hover:text-white transition" href="restaurantes.html">Restaurantes</a></li>
-                    </ul>
-                </div>
-                <div class="font-button">
-                    <h4 class="text-white font-bold mb-4 uppercase text-xs tracking-wider">Legales</h4>
-                    <ul class="space-y-2 text-sm">
-                        <li><a class="hover:text-white transition" href="politicias_privacidad.html">Privacidad</a></li>
-                        <li><a class="hover:text-white transition" href="politicias_privacidad.html">Términos</a></li>
-                    </ul>
+
+                <div class="md:col-span-7 grid grid-cols-1 sm:grid-cols-3 gap-8">
+
+                    <div class="font-button">
+                        <h4 class="text-white font-bold mb-4 uppercase text-xs tracking-wider">Enlaces</h4>
+                        <ul class="space-y-2 text-sm">
+                            <li><a class="text-white hover:text-accent transition-colors duration-300"
+                                    href="index.html">Inicio</a></li>
+                            <li><a class="text-white hover:text-accent transition-colors duration-300"
+                                    href="#destinos">Destinos</a></li>
+                            <li><a class="text-white hover:text-accent transition-colors duration-300"
+                                    href="#hoteles">Hoteles</a></li>
+                            <li><a class="text-white hover:text-accent transition-colors duration-300"
+                                    href="restaurantes.html">Restaurantes</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="font-button">
+                        <h4 class="text-white font-bold mb-4 uppercase text-xs tracking-wider">Legales</h4>
+                        <ul class="space-y-2 text-sm">
+                            <li><a class="text-white hover:text-accent transition-colors duration-300"
+                                    href="politicas_privacidad.html">Privacidad</a></li>
+                            <li><a class="text-white hover:text-accent transition-colors duration-300"
+                                    href="politicas_privacidad.html">Términos</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="font-button">
+                        <h4 class="text-white font-bold mb-4 uppercase text-xs tracking-wider">Recursos</h4>
+                        <ul class="space-y-2 text-sm">
+                            <li><a class="text-white hover:text-accent transition-colors duration-300"
+                                    href="https://ui-avatars.com/" target="_blank">UI Avatars</a></li>
+                            <li><a class="text-white hover:text-accent transition-colors duration-300"
+                                    href="https://fonts.google.com/icons" target="_blank">Google Icons</a></li>
+                            <li><a class="text-white hover:text-accent transition-colors duration-300"
+                                    href="https://supabase.com/" target="_blank">Supabase DB</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
+
             <div class="border-t border-gray-800 pt-8 text-center text-xs font-body">
-                <p>© 2023 Maki Catta Turismo. Todos los derechos reservados.</p>
+                <p class="text-white font-medium">© 2025 Maki Catta Turismo. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
 
     <div id="gallery-modal" class="fixed inset-0 z-[150] hidden bg-black/95 backdrop-blur-md flex flex-col">
-        <button id="close-gallery" class="absolute top-4 right-4 z-[170] text-white/70 hover:text-white p-2">
+        <button id="close-gallery" class="absolute top-4 right-4 z-[170] text-white/70 hover:text-white p-2"
+            aria-label="Cerrar galería">
             <span class="material-symbols-outlined text-4xl md:text-5xl">close</span>
         </button>
         <div class="flex-grow flex items-center justify-center relative touch-pan-y">
             <button id="prev-photo"
-                class="flex absolute left-2 z-[160] text-white/70 hover:text-white bg-black/20 p-2 rounded-full transition-all md:left-4 md:p-3">
+                class="flex absolute left-2 z-[160] text-white/70 hover:text-white bg-black/20 p-2 rounded-full transition-all md:left-4 md:p-3"
+                aria-label="Foto anterior">
                 <span class="material-symbols-outlined text-3xl md:text-4xl">chevron_left</span>
             </button>
             <div class="flex-grow flex items-center justify-center p-4 md:p-8">
-                <img id="main-gallery-img" src=""
+                <img id="main-gallery-img"
+                    src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
                     class="w-auto h-auto max-w-[90vw] max-h-[75vh] object-contain rounded-lg shadow-2xl transition-opacity duration-300"
                     alt="Foto restaurante">
             </div>
             <button id="next-photo"
-                class="flex absolute right-2 z-[160] text-white/70 hover:text-white bg-black/20 p-2 rounded-full transition-all md:right-4 md:p-3">
+                class="flex absolute right-2 z-[160] text-white/70 hover:text-white bg-black/20 p-2 rounded-full transition-all md:right-4 md:p-3"
+                aria-label="Siguiente foto">
                 <span class="material-symbols-outlined text-3xl md:text-4xl">chevron_right</span>
             </button>
         </div>
@@ -306,9 +316,137 @@
         </div>
     </div>
 
+    <div id="review-modal" class="fixed inset-0 z-[110] hidden flex items-center justify-center p-2 sm:p-4">
+        <div id="close-review-overlay" class="absolute inset-0 bg-black/80 backdrop-blur-sm cursor-pointer"></div>
+
+        <div
+            class="relative bg-white dark:bg-card-dark w-full max-w-lg rounded-2xl shadow-2xl flex flex-col max-h-[85vh] overflow-hidden">
+
+            <div class="p-4 border-b border-gray-100 dark:border-white/10 flex justify-between items-center shrink-0">
+                <div>
+                    <h3 class="text-lg font-display font-bold text-primary dark:text-white leading-tight">Deja tu
+                        opinión</h3>
+                    <p class="text-[10px] text-secondary/50 uppercase tracking-widest">Tu experiencia cuenta</p>
+                </div>
+                <button id="close-review-x" class="text-secondary/40 hover:text-primary transition-colors"
+                    aria-label="Cerrar formulario">
+                    <span class="material-symbols-outlined">close</span>
+                </button>
+            </div>
+
+            <form id="review-form" class="p-5 space-y-4 overflow-y-auto">
+                <div class="space-y-1">
+                    <label for="rev-name" class="block text-[11px] font-bold text-secondary/60 uppercase">Tu
+                        Nombre</label>
+                    <input type="text" id="rev-name" required placeholder="Ej. Juan Pérez"
+                        class="w-full px-4 py-2 text-sm rounded-xl border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/5 outline-none focus:ring-2 focus:ring-[#E9C46A]">
+                </div>
+
+                <div class="space-y-1">
+                    <span class="block text-[11px] font-bold text-secondary/60 uppercase">Puntuación</span>
+                    <div
+                        class="flex items-center justify-between p-3 rounded-xl bg-gray-50 dark:bg-white/5 border border-gray-200 dark:border-white/10">
+                        <div id="star-rating" class="flex gap-0.5 select-none cursor-pointer">
+                            <span class="material-symbols-outlined text-2xl text-gray-300" data-value="1">star</span>
+                            <span class="material-symbols-outlined text-2xl text-gray-300" data-value="2">star</span>
+                            <span class="material-symbols-outlined text-2xl text-gray-300" data-value="3">star</span>
+                            <span class="material-symbols-outlined text-2xl text-gray-300" data-value="4">star</span>
+                            <span class="material-symbols-outlined text-2xl text-gray-300" data-value="5">star</span>
+                        </div>
+
+                        <div class="flex items-center gap-2 border-l border-gray-200 dark:border-white/10 pl-4">
+                            <input type="number" id="rev-rating" min="0" max="5" step="any" value="5"
+                                class="w-16 py-1 text-center text-base font-bold bg-white dark:bg-card-dark text-[#E9C46A] border border-gray-200 rounded-lg outline-none">
+                            <span class="text-[9px] font-bold text-secondary/40">PTOS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-y-1">
+                    <label for="rev-comment" class="block text-[11px] font-bold text-secondary/60 uppercase">Tu
+                        Comentario</label>
+                    <textarea id="rev-comment" rows="3" required placeholder="Cuéntanos qué tal estuvo..."
+                        class="w-full px-4 py-2 text-sm rounded-xl border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/5 outline-none focus:ring-2 focus:ring-[#E9C46A] resize-none"></textarea>
+                </div>
+
+                <div class="flex gap-3 pt-2">
+                    <button type="button" id="btn-cancel-review"
+                        class="flex-1 py-2.5 text-xs font-bold text-secondary/50 uppercase">Cancelar</button>
+                    <button type="submit"
+                        class="flex-[2] py-2.5 rounded-xl text-xs font-bold bg-[#F4E1B0] hover:bg-[#E9C46A] text-primary transition-all flex items-center justify-center gap-2 uppercase tracking-tighter">
+                        <span class="material-symbols-outlined text-lg">send</span> Publicar
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="share-modal" class="fixed inset-0 z-[200] hidden flex items-center justify-center p-4">
+        <div id="close-share-overlay" class="absolute inset-0 bg-black/60 backdrop-blur-sm"></div>
+
+        <div class="relative bg-white dark:bg-card-dark w-full max-w-sm rounded-2xl shadow-2xl overflow-hidden">
+            <div class="p-4 border-b border-gray-100 dark:border-white/10 flex justify-between items-center">
+                <h3 class="font-display font-bold text-primary dark:text-white">Compartir</h3>
+                <button id="close-share-x" class="text-secondary/50 hover:text-primary transition-colors"
+                    aria-label="Cerrar compartir">
+                    <span class="material-symbols-outlined">close</span>
+                </button>
+            </div>
+
+            <div class="p-6 grid grid-cols-4 gap-4">
+                <a id="share-whatsapp" href="#" target="_blank" class="flex flex-col items-center gap-2 group">
+                    <div
+                        class="size-12 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center group-hover:scale-110 transition-transform">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" class="size-6"
+                            alt="WA">
+                    </div>
+                    <span class="text-[10px] font-bold text-secondary uppercase">WhatsApp</span>
+                </a>
+                <a id="share-facebook" href="#" target="_blank" class="flex flex-col items-center gap-2 group">
+                    <div
+                        class="size-12 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center group-hover:scale-110 transition-transform">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/2021_Facebook_icon.svg"
+                            class="size-6" alt="FB">
+                    </div>
+                    <span class="text-[10px] font-bold text-secondary uppercase">Facebook</span>
+                </a>
+                <a id="share-x" href="#" target="_blank" class="flex flex-col items-center gap-2 group">
+                    <div
+                        class="size-12 rounded-full bg-gray-100 dark:bg-white/10 flex items-center justify-center group-hover:scale-110 transition-transform">
+                        <svg class="size-5 fill-current text-black dark:text-white" viewBox="0 0 24 24">
+                            <path
+                                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                        </svg>
+                    </div>
+                    <span class="text-[10px] font-bold text-secondary uppercase">X</span>
+                </a>
+                <a id="share-email" href="#" class="flex flex-col items-center gap-2 group">
+                    <div
+                        class="size-12 rounded-full bg-red-100 dark:bg-red-900/30 flex items-center justify-center group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-red-600">mail</span>
+                    </div>
+                    <span class="text-[10px] font-bold text-secondary uppercase">Email</span>
+                </a>
+            </div>
+
+            <div class="p-6 bg-gray-50 dark:bg-white/5 border-t border-gray-100 dark:border-white/10">
+                <p class="text-[10px] font-bold text-secondary/50 uppercase mb-2">Copiar enlace</p>
+                <div
+                    class="flex items-center gap-2 bg-white dark:bg-card-dark border border-gray-200 dark:border-white/10 p-2 rounded-xl">
+                    <input type="text" id="share-url-input" readonly
+                        class="bg-transparent border-none text-xs flex-1 focus:ring-0 text-primary dark:text-white overflow-hidden text-ellipsis">
+                    <button id="btn-copy-link"
+                        class="bg-primary text-white px-4 py-1.5 rounded-lg text-xs font-bold hover:opacity-90 active:scale-95 transition-all">
+                        Copiar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script src="js/tailwind.config.js"></script>
     <script src="js/header.js"></script>
-    <script src="js/detalle_restaurante.js"></script>
+    <script type="module" src="js/detalle_restaurante.js"></script>
 </body>
 
 </html>

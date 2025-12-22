@@ -4,8 +4,6 @@
         "nombre": "La Varangue",
         "categoria": "Alta Cocina Francesa-Malgache",
         "precio": "$$$$",
-        "puntuacion": 4.9,
-        "resenas_conteo": 310,
         "ciudad": "Antananarivo",
         "pais": "Madagascar",
         "descripcion": [
@@ -13,12 +11,12 @@
             "Ubicado en una casona histórica decorada con antigüedades. Su especialidad es el filete de cebú y el foie gras artesanal."
         ],
         "imagenes": [
-            "https://raw.githubusercontent.com/Jhontan200/Prueba/main/imagenes/la-varangue.jpg",
-            "https://raw.githubusercontent.com/Jhontan200/Prueba/main/imagenes/restaurante_1_1.jpg",
-            "https://raw.githubusercontent.com/Jhontan200/Prueba/main/imagenes/restaurante_1_2.jpg",
-            "https://raw.githubusercontent.com/Jhontan200/Prueba/main/imagenes/restaurante_1_3.jpg",
-            "https://raw.githubusercontent.com/Jhontan200/Prueba/main/imagenes/restaurante_1_4.jpg",
-            "https://raw.githubusercontent.com/Jhontan200/Prueba/main/imagenes/restaurante_1_5.jpg"
+            "https://raw.githubusercontent.com/Jhontan200/Prueba/main/imagenes/la-varangue.webp",
+            "https://raw.githubusercontent.com/Jhontan200/Prueba/main/imagenes/restaurante_1_1.webp",
+            "https://raw.githubusercontent.com/Jhontan200/Prueba/main/imagenes/restaurante_1_2.webp",
+            "https://raw.githubusercontent.com/Jhontan200/Prueba/main/imagenes/restaurante_1_3.webp",
+            "https://raw.githubusercontent.com/Jhontan200/Prueba/main/imagenes/restaurante_1_4.webp",
+            "https://raw.githubusercontent.com/Jhontan200/Prueba/main/imagenes/restaurante_1_5.webp"
         ],
         "servicios": [
             {
@@ -59,21 +57,12 @@
             {
                 "nombre": "Filete de Cebú a la Pimienta",
                 "desc": "Carne tierna de cebú local con pimienta verde de Madagascar.",
-                "img": "https://raw.githubusercontent.com/Jhontan200/Prueba/main/imagenes/restaurante_1_plato1.jpg"
+                "img": "https://raw.githubusercontent.com/Jhontan200/Prueba/main/imagenes/restaurante_1_plato1.webp"
             },
             {
                 "nombre": "Magret de Canard",
                 "desc": "Pato con reducción de vainilla y frutas tropicales.",
-                "img": "https://raw.githubusercontent.com/Jhontan200/Prueba/main/imagenes/restaurante_1_plato2.avif"
-            }
-        ],
-        "opiniones": [
-            {
-                "usuario": "Lucía M.",
-                "avatar": "https://i.pravatar.cc/100?u=1",
-                "fecha": "Hace 2 días",
-                "puntuacion": 5,
-                "comentario": "El mejor restaurante de Tana. El servicio es impecable y la comida una delicia."
+                "img": "https://raw.githubusercontent.com/Jhontan200/Prueba/main/imagenes/restaurante_1_plato2.webp"
             }
         ]
     },
@@ -82,8 +71,6 @@
         "nombre": "L'Heure Bleue",
         "categoria": "Mariscos y Cocina Tropical",
         "precio": "$$$",
-        "puntuacion": 4.7,
-        "resenas_conteo": 185,
         "ciudad": "Nosy Be",
         "pais": "Madagascar",
         "descripcion": [
@@ -91,10 +78,10 @@
             "Ambiente 'chic descalzo'. Disfruta de la brisa marina mientras pruebas nuestra famosa langosta a la parrilla."
         ],
         "imagenes": [
-            "https://raw.githubusercontent.com/Jhontan200/Prueba/main/imagenes/LHeure_Bleue.jpg",
-            "https://raw.githubusercontent.com/Jhontan200/Prueba/main/imagenes/restaurante_2_1.jpg",
-            "https://raw.githubusercontent.com/Jhontan200/Prueba/main/imagenes/restaurante_2_2.jpg",
-            "https://raw.githubusercontent.com/Jhontan200/Prueba/main/imagenes/restaurante_2_3.jpg"
+            "https://raw.githubusercontent.com/Jhontan200/Prueba/main/imagenes/LHeure_Bleue.webp",
+            "https://raw.githubusercontent.com/Jhontan200/Prueba/main/imagenes/restaurante_2_1.webp",
+            "https://raw.githubusercontent.com/Jhontan200/Prueba/main/imagenes/restaurante_2_2.webp",
+            "https://raw.githubusercontent.com/Jhontan200/Prueba/main/imagenes/restaurante_2_3.webp"
         ],
         "servicios": [
             {
@@ -133,13 +120,6 @@
                 "desc": "Langosta fresca bañada en mantequilla infusionada con vainilla de Sambava.",
                 "img": "https://raw.githubusercontent.com/Jhontan200/Prueba/main/imagenes/restaurante_2_plato1.webp"
             }
-        ],
-        "opiniones": [
-            {
-                "usuario": "Carlos R.",
-                "puntuacion": 5,
-                "comentario": "Cenar con los pies en la arena es mágico. La langosta es de otro mundo."
-            }
         ]
     },
     {
@@ -147,8 +127,6 @@
         "nombre": "Valahara Antsirabe",
         "categoria": "Comida Típica Tradicional",
         "precio": "$$",
-        "puntuacion": 4.6,
-        "resenas_conteo": 150,
         "ciudad": "Antsirabe",
         "pais": "Madagascar",
         "descripcion": [
@@ -156,11 +134,11 @@
             "Decoración rústica con materiales naturales. No dejes de probar el Romazava, el plato nacional de Madagascar."
         ],
         "imagenes": [
-            "https://raw.githubusercontent.com/Jhontan200/Prueba/main/imagenes/Valahara_Antsirabe.jpg",
-            "https://raw.githubusercontent.com/Jhontan200/Prueba/main/imagenes/restaurante_3_1.jpg",
-            "https://raw.githubusercontent.com/Jhontan200/Prueba/main/imagenes/restaurante_3_2.jpg",
-            "https://raw.githubusercontent.com/Jhontan200/Prueba/main/imagenes/restaurante_3_3.jpg",
-            "https://raw.githubusercontent.com/Jhontan200/Prueba/main/imagenes/restaurante_3_4.jpg"
+            "https://raw.githubusercontent.com/Jhontan200/Prueba/main/imagenes/Valahara_Antsirabe.webp",
+            "https://raw.githubusercontent.com/Jhontan200/Prueba/main/imagenes/restaurante_3_1.webp",
+            "https://raw.githubusercontent.com/Jhontan200/Prueba/main/imagenes/restaurante_3_2.webp",
+            "https://raw.githubusercontent.com/Jhontan200/Prueba/main/imagenes/restaurante_3_3.webp",
+            "https://raw.githubusercontent.com/Jhontan200/Prueba/main/imagenes/restaurante_3_4.webp"
         ],
         "servicios": [
             {
@@ -199,13 +177,6 @@
                 "desc": "Caldo de hojas verdes picantes (brèdes) con carne de cebú.",
                 "img": "https://raw.githubusercontent.com/Jhontan200/Prueba/main/imagenes/restaurante_3_plato1.webp"
             }
-        ],
-        "opiniones": [
-            {
-                "usuario": "Elena V.",
-                "puntuacion": 4,
-                "comentario": "Lugar muy acogedor. El café es excelente y el trato muy amable."
-            }
         ]
     },
     {
@@ -213,8 +184,6 @@
         "nombre": "Su e Giu",
         "categoria": "Italiana y Mediterránea",
         "precio": "$$$",
-        "puntuacion": 4.5,
-        "resenas_conteo": 210,
         "ciudad": "Antananarivo",
         "pais": "Madagascar",
         "descripcion": [
@@ -222,13 +191,13 @@
             "Famoso por sus pastas artesanales hechas a mano diariamente y su terraza con vistas a la ciudad."
         ],
         "imagenes": [
-            "https://raw.githubusercontent.com/Jhontan200/Prueba/main/imagenes/Su_e_Giu.jpg",
-            "https://raw.githubusercontent.com/Jhontan200/Prueba/main/imagenes/restaurante_4_1.jpg",
-            "https://raw.githubusercontent.com/Jhontan200/Prueba/main/imagenes/restaurante_4_2.jpg",
-            "https://raw.githubusercontent.com/Jhontan200/Prueba/main/imagenes/restaurante_4_3.jpg",
-            "https://raw.githubusercontent.com/Jhontan200/Prueba/main/imagenes/restaurante_4_4.jpg",
-            "https://raw.githubusercontent.com/Jhontan200/Prueba/main/imagenes/restaurante_4_5.jpg",
-            "https://raw.githubusercontent.com/Jhontan200/Prueba/main/imagenes/restaurante_4_6.jpg"
+            "https://raw.githubusercontent.com/Jhontan200/Prueba/main/imagenes/Su_e_Giu.webp",
+            "https://raw.githubusercontent.com/Jhontan200/Prueba/main/imagenes/restaurante_4_1.webp",
+            "https://raw.githubusercontent.com/Jhontan200/Prueba/main/imagenes/restaurante_4_2.webp",
+            "https://raw.githubusercontent.com/Jhontan200/Prueba/main/imagenes/restaurante_4_3.webp",
+            "https://raw.githubusercontent.com/Jhontan200/Prueba/main/imagenes/restaurante_4_4.webp",
+            "https://raw.githubusercontent.com/Jhontan200/Prueba/main/imagenes/restaurante_4_5.webp",
+            "https://raw.githubusercontent.com/Jhontan200/Prueba/main/imagenes/restaurante_4_6.webp"
         ],
         "servicios": [
             {
@@ -265,14 +234,7 @@
             {
                 "nombre": "Pasta con Gambas",
                 "desc": "Linguine con gambas gigantes de Madagascar y aceite de oliva.",
-                "img": "https://raw.githubusercontent.com/Jhontan200/Prueba/main/imagenes/restaurante_4_plato1.jpg"
-            }
-        ],
-        "opiniones": [
-            {
-                "usuario": "Andrés P.",
-                "puntuacion": 5,
-                "comentario": "Pasta de verdad. Se nota el cariño en cada plato."
+                "img": "https://raw.githubusercontent.com/Jhontan200/Prueba/main/imagenes/restaurante_4_plato1.webp"
             }
         ]
     },
@@ -281,8 +243,6 @@
         "nombre": "La Plantation",
         "categoria": "Fusión Gourmet",
         "precio": "$$$",
-        "puntuacion": 4.8,
-        "resenas_conteo": 140,
         "ciudad": "Toamasina",
         "pais": "Madagascar",
         "descripcion": [
@@ -290,12 +250,12 @@
             "Ambiente colonial con un jardín tropical donde se puede degustar el pescado del día con salsas exóticas."
         ],
         "imagenes": [
-            "https://raw.githubusercontent.com/Jhontan200/Prueba/main/imagenes/la_plantation.jpg",
-            "https://raw.githubusercontent.com/Jhontan200/Prueba/main/imagenes/restaurante_5_1.jpg",
-            "https://raw.githubusercontent.com/Jhontan200/Prueba/main/imagenes/restaurante_5_2.jpg",
-            "https://raw.githubusercontent.com/Jhontan200/Prueba/main/imagenes/restaurante_5_3.jpg",
-            "https://raw.githubusercontent.com/Jhontan200/Prueba/main/imagenes/restaurante_5_4.jpg",
-            "https://raw.githubusercontent.com/Jhontan200/Prueba/main/imagenes/restaurante_5_5.jpg"
+            "https://raw.githubusercontent.com/Jhontan200/Prueba/main/imagenes/la_plantation.webp",
+            "https://raw.githubusercontent.com/Jhontan200/Prueba/main/imagenes/restaurante_5_1.webp",
+            "https://raw.githubusercontent.com/Jhontan200/Prueba/main/imagenes/restaurante_5_2.webp",
+            "https://raw.githubusercontent.com/Jhontan200/Prueba/main/imagenes/restaurante_5_3.webp",
+            "https://raw.githubusercontent.com/Jhontan200/Prueba/main/imagenes/restaurante_5_4.webp",
+            "https://raw.githubusercontent.com/Jhontan200/Prueba/main/imagenes/restaurante_5_5.webp"
         ],
         "servicios": [
             {
@@ -332,14 +292,7 @@
             {
                 "nombre": "Pescado al Coco",
                 "desc": "Filete de pescado blanco con leche de coco fresca y cúrcuma.",
-                "img": "https://raw.githubusercontent.com/Jhontan200/Prueba/main/imagenes/restaurante_5_plato1.jpg"
-            }
-        ],
-        "opiniones": [
-            {
-                "usuario": "Mamy R.",
-                "puntuacion": 5,
-                "comentario": "Ambiente increíble y el curry de pescado es el mejor de la costa este."
+                "img": "https://raw.githubusercontent.com/Jhontan200/Prueba/main/imagenes/restaurante_5_plato1.webp"
             }
         ]
     },
@@ -348,8 +301,6 @@
         "nombre": "L'Orion",
         "categoria": "Especialidades Malgaches",
         "precio": "$$",
-        "puntuacion": 4.4,
-        "resenas_conteo": 95,
         "ciudad": "Antananarivo",
         "pais": "Madagascar",
         "descripcion": [
@@ -357,13 +308,13 @@
             "Especialistas en Ravitoto sy Henakisoa y parrilladas de carne de cebú."
         ],
         "imagenes": [
-            "https://raw.githubusercontent.com/Jhontan200/Prueba/main/imagenes/Lorion.jpg",
-            "https://raw.githubusercontent.com/Jhontan200/Prueba/main/imagenes/restaurante_6_1.jpg",
-            "https://raw.githubusercontent.com/Jhontan200/Prueba/main/imagenes/restaurante_6_2.jpg",
-            "https://raw.githubusercontent.com/Jhontan200/Prueba/main/imagenes/restaurante_6_3.jpg",
-            "https://raw.githubusercontent.com/Jhontan200/Prueba/main/imagenes/restaurante_6_4.jpg",
-            "https://raw.githubusercontent.com/Jhontan200/Prueba/main/imagenes/restaurante_6_5.jpg",
-            "https://raw.githubusercontent.com/Jhontan200/Prueba/main/imagenes/restaurante_6_6.jpg"
+            "https://raw.githubusercontent.com/Jhontan200/Prueba/main/imagenes/Lorion.webp",
+            "https://raw.githubusercontent.com/Jhontan200/Prueba/main/imagenes/restaurante_6_1.webp",
+            "https://raw.githubusercontent.com/Jhontan200/Prueba/main/imagenes/restaurante_6_2.webp",
+            "https://raw.githubusercontent.com/Jhontan200/Prueba/main/imagenes/restaurante_6_3.webp",
+            "https://raw.githubusercontent.com/Jhontan200/Prueba/main/imagenes/restaurante_6_4.webp",
+            "https://raw.githubusercontent.com/Jhontan200/Prueba/main/imagenes/restaurante_6_5.webp",
+            "https://raw.githubusercontent.com/Jhontan200/Prueba/main/imagenes/restaurante_6_6.webp"
         ],
         "servicios": [
             {
@@ -400,14 +351,7 @@
             {
                 "nombre": "Ravitoto Tradicional",
                 "desc": "Hojas de mandioca trituradas con carne de cerdo y arroz blanco.",
-                "img": "https://raw.githubusercontent.com/Jhontan200/Prueba/main/imagenes/restaurante_6_plato1.jpg"
-            }
-        ],
-        "opiniones": [
-            {
-                "usuario": "Faly A.",
-                "puntuacion": 4,
-                "comentario": "Muy buen ambiente y música. El Ravitoto es excelente."
+                "img": "https://raw.githubusercontent.com/Jhontan200/Prueba/main/imagenes/restaurante_6_plato1.webp"
             }
         ]
     }

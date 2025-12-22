@@ -1,42 +1,43 @@
 /**
- * LISTADO DE RESTAURANTES - JS COMPLETO
- * Consumo de JSON remoto vía XMLHttpRequest + Generación de Cards Dinámicas + Hero Slider
+ * LISTADO DE RESTAURANTES - ARQUITECTURA LIMPIA
+ * Combina datos estáticos (GitHub JSON) con dinámicos (Supabase)
  */
+
+import { restaurantService } from './services/restaurantService.js';
 
 // --- VARIABLES PARA EL SLIDER ---
 let currentHeroSlide = 0;
 
 /**
- * 1. CARGA DE DATOS (Mismo método que detalle_restaurante.js)
+ * 1. CARGA DE DATOS (Modernizada)
+ * Ahora usamos async/await y el servicio centralizado
  */
-function loadRestaurantsData() {
-    // URL de tu repositorio en GitHub
-    const requestURL = 'https://raw.githubusercontent.com/Jhontan200/Prueba/main/json/restaurantes.json';
-    const request = new XMLHttpRequest();
+async function loadRestaurantsData() {
+    const container = document.getElementById('restaurantes-container');
 
-    request.open("GET", requestURL);
-    request.responseType = "json";
-    request.send();
+    try {
+        // Mostramos un loader simple mientras carga
+        container.innerHTML = `<div class="col-span-full text-center py-10">Cargando experiencias gastronómicas...</div>`;
 
-    request.onload = function () {
-        if (request.status === 200) {
-            const restaurantes = request.response;
-            if (restaurantes && restaurantes.length > 0) {
-                renderRestaurantCards(restaurantes);
-            }
+        // Llamamos al servicio (Él ya sabe ir a GitHub y luego a Supabase)
+        const restaurantes = await restaurantService.getAllRestaurants();
+
+        if (restaurantes && restaurantes.length > 0) {
+            renderRestaurantCards(restaurantes);
         } else {
-            console.error("Error al cargar los restaurantes:", request.status);
-            document.getElementById('restaurantes-container').innerHTML = 
-                `<p class="col-span-full text-center py-10">No se pudieron cargar los datos.</p>`;
+            throw new Error("No se encontraron restaurantes");
         }
-    };
+
+    } catch (error) {
+        console.error("Error al cargar los restaurantes:", error);
+        container.innerHTML =
+            `<p class="col-span-full text-center py-10">Lo sentimos, no pudimos cargar los datos. Inténtalo más tarde.</p>`;
+    }
 }
 
 /**
  * 2. RENDERIZADO DE TARJETAS EN EL DOM
- */
-/**
- * 2. RENDERIZADO DE TARJETAS EN EL DOM - CORREGIDO
+ * Se ha actualizado para usar los datos dinámicos (puntuacion)
  */
 function renderRestaurantCards(lista) {
     const container = document.getElementById('restaurantes-container');
@@ -45,10 +46,10 @@ function renderRestaurantCards(lista) {
     container.innerHTML = '';
 
     lista.forEach(res => {
-        // Mantenemos la lógica de colores de los badges según tu diseño
-        const badgeColor = res.categoria === 'Mariscos' ? 'bg-blue-500' : 
-                          res.categoria === 'Internacional' ? 'bg-emerald-500' : 
-                          res.categoria === 'Italiana' ? 'bg-orange-600' : 'bg-primary';
+        // Lógica de colores según categoría
+        const badgeColor = res.categoria.includes('Mariscos') ? 'bg-blue-500' :
+            res.categoria.includes('Italiana') ? 'bg-orange-600' :
+                res.categoria.includes('Alta Cocina') ? 'bg-emerald-500' : 'bg-primary';
 
         const cardHTML = `
             <article class="group relative flex flex-col overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg dark:border-slate-800 dark:bg-slate-900">
@@ -72,13 +73,14 @@ function renderRestaurantCards(lista) {
                         
                         <div class="flex items-center gap-1 text-amber-500">
                             <span class="material-symbols-outlined !text-lg fill-current">star</span>
-                            <span class="text-sm font-bold">${res.puntuacion}</span>
+                            <span class="text-sm font-bold">${res.puntuacion > 0 ? res.puntuacion : 'N/A'}</span>
+                            <span class="text-[10px] text-slate-400">(${res.resenas_conteo})</span>
                         </div>
                     </div>
 
                     <div class="flex items-center text-xs text-slate-500 mb-2">
                         <span class="material-symbols-outlined !text-sm mr-1">location_on</span>
-                        <span>${res.ciudad}, ${res.ubicacion || 'Zona Turística'}</span>
+                        <span>${res.ciudad}</span>
                     </div>
 
                     <p class="mt-2 text-sm font-body text-slate-600 dark:text-slate-300 line-clamp-2">
@@ -95,22 +97,18 @@ function renderRestaurantCards(lista) {
         container.innerHTML += cardHTML;
     });
 }
+
 /**
- * 3. LÓGICA DEL HERO SLIDER (Visual)
+ * 3. LÓGICA DEL HERO SLIDER
  */
 function initHeroSlider() {
     const slides = document.querySelectorAll('.hero-slide');
     if (slides.length <= 1) return;
 
     setInterval(() => {
-        // Quitar actual
         slides[currentHeroSlide].classList.replace('opacity-100', 'opacity-0');
         slides[currentHeroSlide].classList.remove('scale-110');
-
-        // Calcular siguiente
         currentHeroSlide = (currentHeroSlide + 1) % slides.length;
-
-        // Mostrar siguiente
         slides[currentHeroSlide].classList.replace('opacity-0', 'opacity-100');
         slides[currentHeroSlide].classList.add('scale-110');
     }, 5000);
