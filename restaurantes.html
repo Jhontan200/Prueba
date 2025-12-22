@@ -4,19 +4,31 @@
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Maki Catta | Restaurantes Exclusivos en Madagascar</title>
     <meta name="description"
-        content="Maki Catta - Explora los mejores restaurantes y destinos exclusivos de Madagascar.">
-    <title>Maki Catta - Restaurantes</title>
+        content="Descubre la mejor gastronomía de Madagascar: desde langosta fresca en Nosy Be hasta filete de cebú.">
+
+    <link rel="icon" href="imagenes/logo_blanco.webp" type="image/png">
+
+    <link rel="preload" as="image" href="imagenes/fondo1.webp" fetchpriority="high">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Alegreya:wght@700&family=Exo+2:wght@500;700&family=Dosis:wght@400;600&family=Material+Icons+Outlined&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap"
-        rel="stylesheet">
+    <link rel="preconnect" href="https://lztzqeqeqtrcaefovydn.supabase.co">
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Alegreya:wght@700&family=Exo+2:wght@500;700&family=Dosis:wght@400;600&family=Material+Icons+Outlined&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap&subset=latin"
+        media="print" onload="this.media='all'">
 
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
-    <link rel="stylesheet" href="css/restaurantes.css">
+
     <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/restaurantes.css">
+    <link rel="modulepreload" href="./js/services/restaurantService.js">
+    <link rel="modulepreload" href="./js/config/supabaseClient.js">
+    <link rel="preconnect" href="https://lztzqeqeqtrcaefovydn.supabase.co">
+    <script src="js/tailwind.config.js" defer></script>
 </head>
 
 <body
@@ -42,8 +54,8 @@
                         href="#hoteles">Hoteles</a>
                     <a class="nav-link text-white/90 hover:text-accent font-medium transition"
                         href="restaurantes.html">Restaurantes</a>
-                    <a class="nav-link text-white/90 hover:text-accent font-medium transition"
-                        href="restaurantes.html">Sobre Nosotros</a>
+                    <a class="nav-link text-white/90 hover:text-accent font-medium transition" href="#">Sobre
+                        Nosotros</a>
 
                     <button id="theme-toggle"
                         class="p-2 rounded-full text-white/90 hover:bg-white/10 transition-colors focus:outline-none"
@@ -79,8 +91,8 @@
                 href="#hoteles">Hoteles</a>
             <a class="mobile-nav-link text-primary dark:text-white text-3xl font-display font-bold"
                 href="restaurantes.html">Restaurantes</a>
-            <a class="mobile-nav-link text-primary dark:text-white text-3xl font-display font-bold"
-                href="restaurantes.html">Sobre Nosotros</a>
+            <a class="mobile-nav-link text-primary dark:text-white text-3xl font-display font-bold" href="#">Sobre
+                Nosotros</a>
             <a class="mt-4 px-10 py-4 rounded-full bg-primary text-white font-button font-bold text-xl shadow-xl active:scale-95 transition-transform"
                 href="#contacto">
                 Contáctenos
@@ -91,12 +103,17 @@
     <main class="flex min-h-screen flex-col">
         <section class="relative flex min-h-[600px] flex-col justify-center overflow-hidden bg-slate-900 py-12">
             <div class="absolute inset-0 z-0">
-                <div class="hero-slide absolute inset-0 bg-cover bg-center transition-opacity duration-1000 opacity-100 scale-110"
-                    style='background-image: url("imagenes/fondo1.jpg");'></div>
-                <div class="hero-slide absolute inset-0 bg-cover bg-center transition-opacity duration-1000 opacity-0"
-                    style='background-image: url("imagenes/fondo2.jpg");'></div>
-                <div class="hero-slide absolute inset-0 bg-cover bg-center transition-opacity duration-1000 opacity-0"
-                    style='background-image: url("imagenes/fondo3.jpg");'></div>
+                <div class="hero-slide absolute inset-0 transition-opacity duration-1000 opacity-100 scale-110">
+                    <img src="imagenes/fondo1.webp" alt="Madagascar Landscape" class="h-full w-full object-cover"
+                        fetchpriority="high">
+                </div>
+                <div class="hero-slide absolute inset-0 transition-opacity duration-1000 opacity-0">
+                    <img src="imagenes/fondo2.webp" alt="Restaurante" class="h-full w-full object-cover" loading="lazy">
+                </div>
+                <div class="hero-slide absolute inset-0 transition-opacity duration-1000 opacity-0">
+                    <img src="imagenes/fondo3.webp" alt="Comida Exótica" class="h-full w-full object-cover"
+                        loading="lazy">
+                </div>
                 <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent"></div>
             </div>
 
@@ -144,7 +161,6 @@
                 </div>
 
                 <div class="md:col-span-7 grid grid-cols-1 sm:grid-cols-3 gap-8">
-
                     <div class="font-button">
                         <h4 class="text-white font-bold mb-4 uppercase text-xs tracking-wider">Enlaces</h4>
                         <ul class="space-y-2 text-sm">
@@ -173,11 +189,6 @@
                         <h4 class="text-white font-bold mb-4 uppercase text-xs tracking-wider">Recursos</h4>
                         <ul class="space-y-2 text-sm">
                             <li><a class="text-white hover:text-accent transition-colors duration-300"
-                                    href="https://ui-avatars.com/" target="_blank" rel="noopener">UI Avatars</a></li>
-                            <li><a class="text-white hover:text-accent transition-colors duration-300"
-                                    href="https://fonts.google.com/icons" target="_blank" rel="noopener">Google
-                                    Icons</a></li>
-                            <li><a class="text-white hover:text-accent transition-colors duration-300"
                                     href="https://supabase.com/" target="_blank" rel="noopener">Supabase DB</a></li>
                         </ul>
                     </div>
@@ -189,9 +200,9 @@
             </div>
         </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-    <script src="js/tailwind.config.js"></script>
-    <script src="js/header.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
+    <script src="js/header.js" defer></script>
     <script type="module" src="js/restaurantes_main.js"></script>
 </body>
 
