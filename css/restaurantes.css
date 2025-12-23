@@ -11,3 +11,9 @@
 .hero-slide.opacity-100 {
     animation: kenburns 6s ease-out forwards;
 }
+
+img {
+    aspect-ratio: 16 / 9;
+    /* O la proporción que tengan tus fotos */
+    object-fit: cover;
+}
